@@ -7,7 +7,7 @@ const Singin = () => {
   return (
     <>
       <Navbar />
-      <div className='max-w-screen max-h-screen flex overflow-hidden'>
+      <div className='max-w-screen max-h-screen flex overflow-hidden justify-center items-center my-12 md:my-0'>
           <div className='md:w-[50%] max-w-screen flex justify-center items-center'>
             <div className='flex flex-col'>
               <h1 className='font-bebas text-4xl uppercase'>Welcome There!</h1>
@@ -43,10 +43,38 @@ const Singin = () => {
                 <button className="w-full bg-[#68CAF1] py-3 text-white rounded-md my-6">Sign In</button>
 
                 <div className='w-full flex flex-row'>
-                  <button className='bg-transparent border-2  border-zinc-600 mr-2 py-1 px-4 rounded-md'><Google /></button>
-                  <button className='bg-transparent border-2  border-zinc-600 mx-2 py-1 px-4 rounded-md'><Google /></button>
-                  <button className='bg-transparent border-2 border-zinc-600 mx-2 py-1 px-4 rounded-md'><Google /></button>
-                  <button className='bg-transparent border-2 border-zinc-600 mx-2 py-1 px-4 rounded-md'><Google /></button>
+                  <button className='bg-transparent border-2  border-slate-400 mr-4 py-1 px-4 rounded-lg'>
+                    <Image 
+                      src='/images/googleLogo.png' 
+                      alt='google logo' 
+                      width={20} 
+                      height={20} 
+                    />
+                  </button>
+                  <button className='bg-transparent border-2  border-slate-400 mr-4 py-1 px-4 rounded-lg'>
+                    <Image 
+                      src='/images/metamaskLogo.png' 
+                      alt='google logo' 
+                      width={20} 
+                      height={20} 
+                    />
+                  </button>
+                  <button className='bg-transparent border-2  border-slate-400 mr-4 py-1 px-4 rounded-lg'>
+                    <Image 
+                      src='/images/walletConnectLogo.png' 
+                      alt='google logo' 
+                      width={20} 
+                      height={20} 
+                    />
+                  </button>
+                  <button className='bg-transparent border-2  border-slate-400 mr-4 py-1 px-4 rounded-lg'>
+                    <Image 
+                      src='/images/metaLogo.png' 
+                      alt='google logo' 
+                      width={20} 
+                      height={20} 
+                    />
+                  </button>
                 </div>
                 <div className='w-full text-center my-4'>
                   Don&apos;t have an account? <span className='text-[#68CAF1]'>Sign Up</span>
