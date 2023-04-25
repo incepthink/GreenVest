@@ -21,7 +21,8 @@ module.exports = {
     },
     backgroundImage: {
       "home-background-1": 'url("/images/illustration.png")',
-      "service-background": 'url("/images/OurServiceBG.png")'
+      "service-background": 'url("/images/OurServiceBG.png")',
+      "img-background":'url("/images/earth-bg.png")'
     },
     scrollbar: {
       width: '0.5em',
