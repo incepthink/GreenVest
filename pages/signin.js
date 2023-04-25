@@ -1,9 +1,27 @@
 import Navbar from '@/components/Navbar/Navbar'
+import { env } from '@/next.config'
+import { StoreContext } from '@/utils/Store'
 import { Google } from '@mui/icons-material'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useContext } from 'react'
 
 const Singin = () => {
+  const { state, dispatch } = useContext(StoreContext);
+  const router = useRouter();
+  const path = router.asPath;
+  console.log(path);
+
+  const googleLoginHandler = async () => {
+    // setshowModal(false);
+    const idToken = await state.magic.oauth.loginWithRedirect({
+        provider: 'google',
+        redirectURI: `${env.NEXT_PUBLIC_URL}/redirect?link=/`,
+    });
+    console.log(idToken);
+  }
+
   return (
     <>
       <Navbar />
@@ -43,7 +61,7 @@ const Singin = () => {
                 <button className="w-full bg-[#68CAF1] py-3 text-white rounded-md my-6">Sign In</button>
 
                 <div className='w-full flex flex-row'>
-                  <button className='bg-transparent border-2  border-zinc-600 mr-2 py-1 px-4 rounded-md'><Google /></button>
+                  <button onClick={googleLoginHandler} className='bg-transparent border-2  border-zinc-600 mr-2 py-1 px-4 rounded-md'><Google /></button>
                   <button className='bg-transparent border-2  border-zinc-600 mx-2 py-1 px-4 rounded-md'><Google /></button>
                   <button className='bg-transparent border-2 border-zinc-600 mx-2 py-1 px-4 rounded-md'><Google /></button>
                   <button className='bg-transparent border-2 border-zinc-600 mx-2 py-1 px-4 rounded-md'><Google /></button>

@@ -1,7 +1,9 @@
+import { StoreContext } from "@/utils/Store";
+import { logoutHandler } from "@/utils/user";
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 
 
 function MobileNav({open, setOpen}) {
@@ -75,10 +77,36 @@ function MobileNav({open, setOpen}) {
 }
 
 const Navbar = () => {
-
+    const { state, dispatch } = useContext(StoreContext);
+    const [userText, setUserText] = useState("Connect Wallet");
     const [open,setOpen] = useState(false);
     const router = useRouter();
+
+    //check if user is empty and logout if empty
+    try {
+        if (state.user && Object.keys(state.user).length == 0) {
+        dispatch({ type: "UNSET_USER" });
+        Cookies.remove("user");
+        dispatch({ type: "UNSET_JWT" });
+        Cookies.remove("jwt");
+        }
+    } catch (error) {
+        console.log(error);
+    }
     
+    useEffect(() => {
+        console.log(state.user);
+        state?.user?.wallet_address
+          ? setUserText(
+              state.user.wallet_address.slice(0, 4) +
+                "..." +
+                state.user.wallet_address.slice(-3)
+            )
+          : state?.user?.email
+          ? setUserText(state.user.email)
+          : setUserText("CONNECTED");
+      }, [state.user]);
+
     return (
         <nav className="flex filter z-50 static drop-shadow-md bg-white font-oswald px-4 py-4 h-20 items-center">
             <MobileNav open={open} setOpen={setOpen} />
@@ -131,7 +159,17 @@ const Navbar = () => {
                         Contact Us
                     </Link>
                 </div>
-                <div className="hidden md:flex text-lg font-nunito items-center">
+                {
+                    state.user ? 
+                    <div className="hidden md:flex text-lg font-nunito items-center">
+                        <button 
+                            onClick={() => {logoutHandler(dispatch)}}
+                            className="mx-4 text-white bg-[#04A6E7] rounded-[1.5rem] px-4 py-2 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150"
+                            >
+                                Log out
+                        </button>
+                    </div>
+                    : <div className="hidden md:flex text-lg font-nunito items-center">
                     <Link 
                         href='/signin'
                         className="mx-4 text-[#04A6E7]  hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 underline underline-offset-[4px] decoration-[#04A6E7] decoration-2"
@@ -148,6 +186,8 @@ const Navbar = () => {
                         </button>
                     </Link>
                 </div>  
+                }
+                
             </div>
         </nav>
     )
