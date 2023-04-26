@@ -4,13 +4,13 @@ import Image from 'next/image'
 import CheckIcon from '@mui/icons-material/Check';
 import React from 'react'
 
-const enterprise = () => {
+const residential = () => {
   return (
     <div>
         <Navbar />
         <div className='flex flex-col text-center items-center my-8 font-poppins'>
-            <h1 className='text-[#04A6E7] font-bold text-2xl uppercase'> Enterprise</h1>
-            <p className='text-slate-500 mt-4 font-semibold'>A one-stop-shop for Enterprises to meet your ESG goals.</p>    
+            <h1 className='text-[#04A6E7] font-bold text-2xl uppercase'> Residential </h1>
+            <p className='text-slate-500 mt-4 font-semibold'>A one-stop-shop for Residential owner.</p>    
         </div>
         <div className='flex flex-col md:flex-row md:flex-wrap md:max-w-[90%]  w-100 mx-auto justify-between items-center my-12 font-poppins'>
             
@@ -142,4 +142,4 @@ const enterprise = () => {
   )
 }
 
-export default enterprise
+export default residential
