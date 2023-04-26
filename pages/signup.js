@@ -1,27 +1,12 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Navbar from '@/components/Navbar/Navbar'
-import { env } from '@/next.config'
-import { StoreContext } from '@/utils/Store'
 import { Google } from '@mui/icons-material'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useContext } from 'react'
 
-const Singin = () => {
-  const { state, dispatch } = useContext(StoreContext);
-  const router = useRouter();
-  const path = router.asPath;
-  console.log(path);
-
-  const googleLoginHandler = async () => {
-    // setshowModal(false);
-    const idToken = await state.magic.oauth.loginWithRedirect({
-        provider: 'google',
-        redirectURI: `${env.NEXT_PUBLIC_URL}/redirect?link=/`,
-    });
-    console.log(idToken);
-  }
-  
+const signup = () => {
+    const router = useRouter();
   return (
     <>
       <Navbar />
@@ -47,6 +32,14 @@ const Singin = () => {
                     className="bg-white border border-gray-300 rounded-md py-2 px-4 placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-white-600 focus:border-white" 
                   />
                 </div>
+                <div className='flex flex-col w-full my-2'>
+                  <label>Confirm Password</label>
+                  <input 
+                    type='password' 
+                    placeholder='Confirm Password' 
+                    className='bg-white border border-gray-300 rounded-md py-2 px-4 placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-white-600 focus:border-white' 
+                  />
+                </div>
                 <div className='flex flex-row w-full justify-between my-2'>
                   <div className="flex items-center">
                     <input
@@ -61,7 +54,7 @@ const Singin = () => {
                 <button className="w-full bg-[#68CAF1] py-3 text-white rounded-md my-6">Sign In</button>
 
                 <div className='w-full flex flex-row'>
-                  <button onClick={googleLoginHandler} className='bg-transparent border-2  border-slate-400 mr-4 py-1 px-4 rounded-lg'>
+                  <button className='bg-transparent border-2  border-slate-400 mr-4 py-1 px-4 rounded-lg'>
                     <Image 
                       src='/images/googleLogo.png' 
                       alt='google logo' 
@@ -95,7 +88,7 @@ const Singin = () => {
                   </button>
                 </div>
                 <div className='w-full text-center my-4'>
-                  Don&apos;t have an account? <span className='text-[#68CAF1]' onClick={()=>router.push('/signup')}>Sign Up</span>
+                  Don&apos;t have an account? <span className='text-[#68CAF1]' onClick={()=>router.push('/signin')}>Sign In</span>
                 </div>
               </form>
 
@@ -109,4 +102,4 @@ const Singin = () => {
   )
 }
 
-export default Singin
+export default signup

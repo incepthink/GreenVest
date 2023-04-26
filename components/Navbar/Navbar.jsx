@@ -136,7 +136,7 @@ const Navbar = () => {
                     </Link>
                     <Link 
                         href="/services" 
-                        className={`mx-4 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 ${router.pathname=='/services' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
+                        className={`mx-4 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 ${(router.pathname=='/services' || router.pathname=='/services/enterprise') && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
                     >
                         Services
                     </Link>
