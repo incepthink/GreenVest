@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { StoreProvider } from "@/utils/Store";
 import WagmiProvider from "@/utils/WagmiProvider";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App({ Component, pageProps }) {
     return (
