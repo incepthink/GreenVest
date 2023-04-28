@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import "@/styles/globals.css";
 import { StoreProvider } from "@/utils/Store";
 import WagmiProvider from "@/utils/WagmiProvider";
@@ -9,7 +10,9 @@ export default function App({ Component, pageProps }) {
         <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
             <StoreProvider>
                 <WagmiProvider>
-                    <Component {...pageProps} />
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
                 </WagmiProvider>
             </StoreProvider>
         </GoogleOAuthProvider>

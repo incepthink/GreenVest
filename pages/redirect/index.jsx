@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../../utils/Store";
 import { magicLogin } from "../../utils/user";
 import { notifyPromise, notifyResolve } from "../../utils/notify";
+import { BeatLoader } from "react-spinners";
 
 
 const redirect = ({ link }) => {
@@ -50,7 +51,7 @@ const redirect = ({ link }) => {
     return (
         <div className="flex items-center justify-center h-screen">
             {/* <LoadingModal showModal={true} /> */}
-            Loading...
+            <BeatLoader size={40} color="#04A6E7"/>
         </div>
     )
 }
