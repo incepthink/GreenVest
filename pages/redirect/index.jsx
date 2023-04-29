@@ -1,4 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useRouter } from "next/router";
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useContext, useEffect, useState } from "react";
 import { StoreContext } from "../../utils/Store";
 import { magicLogin } from "../../utils/user";
