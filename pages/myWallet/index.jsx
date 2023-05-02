@@ -42,7 +42,7 @@ const MyWallet = () => {
                 config
             );
             console.log(res.data);
-            setNftList(res.data);
+            setNftList(res.data.filter(val => val.id == 14));
             setIsLoading(false);
         } catch (e) {
             console.log(e);
@@ -81,7 +81,7 @@ const MyWallet = () => {
                                             <img
                                                 class="rounded-t-lg object-cover w-full"
                                                 src={
-                                                    "https://i.seadn.io/gae/Naa32-rxoGSFWlTgXjUz2o8G4XRmnj0thaC_Yej28PJrNdOGTkRAzz-tza5XUTKnliJ_om89QDuhHtMjNvONpRipbFt7NjQsFBlC0Ds?auto=format&w=1000"
+                                                    nftInfo.nft_image_url
                                                 }
                                                 alt=""
                                             />
@@ -89,11 +89,11 @@ const MyWallet = () => {
                                         <div class="p-5">
                                             <a href="#">
                                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                                    Carbon Credits NFT
+                                                    {nftInfo.name}
                                                 </h5>
                                             </a>
                                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-100">
-                                                A cool Carbon Credits NFT
+                                                {nftInfo.description}
                                             </p>
                                         </div>
                                     </div>
