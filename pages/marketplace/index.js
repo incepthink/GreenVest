@@ -62,7 +62,7 @@ const Marketplace = () => {
             axios.defaults.headers.common = {
                 "x-api-key": token,
             };
-            const res = await axios.get(`https://api.hashcase.co/dev/checkBalanceOfNFTInWallet?wallet_address=${wallet_address}&token_id=1&collection_id=2`, config);
+            const res = await axios.get(`https://api.hashcase.co/dev/checkBalanceOfNFTInWallet?wallet_address=${wallet_address}&token_id=6&collection_id=2`, config);
             console.log(res.data);
             setNftBalance(res.data.balance);
         }catch(e){
