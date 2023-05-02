@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import Modal from "react-modal";
 import { PropagateLoader } from "react-spinners";
+import { toast } from "react-toastify";
 
 const customStyles = {
     content: {
@@ -98,7 +99,7 @@ const Marketplace = () => {
             const bodyParameters = {
                 wallet_address: `${wallet_address}`,
                 collection_id: 2,
-                token_id: 1
+                token_id: 6
             };
         
             const config = {

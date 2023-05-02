@@ -1,6 +1,7 @@
 import { StoreContext } from "@/utils/Store";
 import { logoutHandler } from "@/utils/user";
 import { Button, Menu, MenuItem } from "@mui/material";
+import Cookies from "js-cookie";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
