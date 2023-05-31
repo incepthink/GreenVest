@@ -10,12 +10,27 @@ import { useContext, useEffect, useState } from "react"
 function MobileNav({open, setOpen}) {
     const router = useRouter();
     return (
-        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-            <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
-           
-                <Link className="flex items-center text-xl font-semibold" href="/">
-                    <Image width={55} height={41} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}} />
-                    <span className="text-[#00337C]">Tokere</span>
+        <div
+            className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${
+                open ? "-translate-x-0" : "-translate-x-full"
+            } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
+        >
+            <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
+                {" "}
+                {/*logo container*/}
+                <Link
+                    className="flex items-center text-xl font-semibold"
+                    href="/"
+                >
+                    <Image
+                        width={55}
+                        height={41}
+                        src="/images/Logo.png"
+                        alt="website logo"
+                        style={{ objectFit: "contain" }}
+                    />
+                    <span className="text-[#00337C]">Green</span>
+                    <span className="text-[#88E828]">vest</span>
                 </Link>
 
             </div>
@@ -35,10 +50,45 @@ function MobileNav({open, setOpen}) {
                 >
                     Services
                 </Link>
-                s<Link 
-                    className={`my-4 ${router.pathname=='/contact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `} 
-                    href="/contact" 
-                    onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
+                <Link
+                    className={`my-4 ${
+                        router.pathname == "/impact" &&
+                        "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
+                    } `}
+                    href="/impact"
+                    onClick={() =>
+                        setTimeout(() => {
+                            setOpen(!open);
+                        }, 100)
+                    }
+                >
+                    Our Impact
+                </Link>
+                <Link
+                    className={`my-4 ${
+                        router.pathname == "/careers" &&
+                        "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
+                    } `}
+                    href="/careers"
+                    onClick={() =>
+                        setTimeout(() => {
+                            setOpen(!open);
+                        }, 100)
+                    }
+                >
+                    Careers
+                </Link>
+                <Link
+                    className={`my-4 ${
+                        router.pathname == "/contact" &&
+                        "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
+                    } `}
+                    href="/contact"
+                    onClick={() =>
+                        setTimeout(() => {
+                            setOpen(!open);
+                        }, 100)
+                    }
                 >
                     Contact Us                    
                 </Link>
@@ -107,9 +157,19 @@ const Navbar = () => {
         <nav className="flex filter z-50 static drop-shadow-md bg-white font-oswald px-4 py-4 h-20 items-center">
             <MobileNav open={open} setOpen={setOpen} />
             <div className="w-3/12 flex items-center">
-                <Link className="flex items-center text-2xl font-semibold" href="/">
-                    <Image width={75} height={60} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}}  />
-                    <span className="text-[#00337C]">Tokere</span>
+                <Link
+                    className="flex items-center text-2xl font-semibold"
+                    href="/"
+                >
+                    <Image
+                        width={75}
+                        height={60}
+                        src="/images/Logo.png"
+                        alt="website logo"
+                        style={{ objectFit: "contain" }}
+                    />
+                    <span className="text-[#00337C]">Green</span>
+                    <span className="text-[#88E828]">vest</span>
                 </Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">
@@ -136,9 +196,30 @@ const Navbar = () => {
                     >
                         Services
                     </Link>
-                    <Link 
-                        href="/contact" 
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${router.pathname=='/contact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
+                    <Link
+                        href="/impact"
+                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${
+                            router.pathname == "/impact" &&
+                            "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
+                        } `}
+                    >
+                        Our Impact
+                    </Link>
+                    <Link
+                        href="/careers"
+                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${
+                            router.pathname == "/careers" &&
+                            "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
+                        } `}
+                    >
+                        Careers
+                    </Link>
+                    <Link
+                        href="/contact"
+                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${
+                            router.pathname == "/contact" &&
+                            "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
+                        } `}
                     >
                         Contact Us
                     </Link>
