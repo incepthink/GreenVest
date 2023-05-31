@@ -7,17 +7,17 @@ const Footer = () => {
   return (
     <div className='max-w-screen    flex text-white bg-[#04A6E7]  flex-col font-poppins'>
         <div className='hidden md:flex flex-row justify-between items-center'>
-            <Link className="flex items-center bg-[#00000033] px-12 py-8 text-2xl font-semibold " href="/">
+            <Link className="flex items-center bg-[#00000033] px-12 py-4 text-xl font-semibold " href="/">
                 <Image width={75} height={60} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}}  />
-                <span className="text-white">Green</span><span className="text-[#88E828]">RE&apos;s</span>
+                <span className="text-white">Tokere&apos;s</span>
             </Link>
-            <h1 className='hidden md:block text-2xl font-bold px-24'>Pages</h1>
-            <h1 className='hidden md:block text-2xl font-bold px-24'>Utilities</h1>
-            <h1 className='hidden md:block text-2xl font-bold px-24'>Subscribe</h1>
+            <h1 className='hidden md:block text-xl font-bold px-24'>Pages</h1>
+            <h1 className='hidden md:block text-xl font-bold px-24'>Utilities</h1>
+            <h1 className='hidden md:block text-xl font-bold px-24'>Subscribe</h1>
         </div>
         <Link className="md:hidden flex justify-center items-center bg-[#00000033] px-12 py-8 text-2xl font-semibold " href="/">
             <Image width={75} height={60} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}}  />
-            <span className="text-white">Green</span><span className="text-[#88E828]">RE&apos;s</span>
+            <span className="text-white">Tokere&apos;s</span>
         </Link>
         <div className='grid md:grid-cols-3  p-8 font-poppins'>
             <div className='flex flex-col p-4'>
@@ -60,9 +60,6 @@ const Footer = () => {
                     <Twitter className='text-white' />
                 </div>
             </div>
-        </div>
-        <div className='text-center text-white font-poppins mb-2'>
-            &copy; GreenRE&apos;s | Designed by Vishesh Patel
         </div>
     </div>
   )

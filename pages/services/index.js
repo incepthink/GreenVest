@@ -14,7 +14,7 @@ const services = () => {
             <div className='w-[50%] flex flex-col md:py-32 md:px-20 font-poppins'>
                 <h1 className='text-black font-bold text-6xl uppercase '>Our Services</h1>
                 <p className='font-regular text-[#2E2E2E] my-14'>
-                    &quot;At GreenRe&apos;s, we understand the importance of protecting and preserving our planet for future generations, 
+                    &quot;At Tokere&apos;s, we understand the importance of protecting and preserving our planet for future generations, 
                     which is why we offer a comprehensive range of environmental services designed to help businesses 
                     and individuals minimize their carbon footprint and promote sustainable practices.&quot;
                 </p>

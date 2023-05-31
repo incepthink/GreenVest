@@ -11,7 +11,7 @@ const Visions = () => {
                 <h2><Link href="/services" className="text-green-500 font-semibold underline mt-8">Explore</Link></h2>
             </div>
             <h2 className="text-2xl font-bold my-2 hidden md:block">Our Vision</h2>
-            <p className="mb-12 text-gray-500 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="mb-12 text-gray-500 text-xl">Our platform provides verified, transparent and immutable RECs for a clear trail and transfer of ownership. Enterprises and Brokers will find tokere a highly efficient platform to manage their REC transactions easier, faster and sustainable.</p>
             <Link href="/impact" className="text-green-500 font-semibold underline mt-8 hidden md:block">Explore</Link>
         </div>
         <div className="bg-white rounded-tr-full rounded-tl-full md:w-[22%] w-[90%] shadow-md font-poppins my-4 pb-4 transform md:translate-x-0 -translate-x-4 cursor-pointer hover:scale-105 hover:duration-500">

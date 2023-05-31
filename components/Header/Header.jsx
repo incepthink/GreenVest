@@ -12,7 +12,7 @@ const Header = () => {
             <div className="flex flex-col md:flex-row justify-around items-center">
                 <div className="md:w-[55%] w-[100%] md:px-20 px-8 md:py-24 py-8 flex-col font-bebas uppercase">
                     <h1 className="md:text-7xl text-5xl flex items-center">
-                        Turnkey ESG{" "}
+                        Tokere{" "}
                         <div className="w-100 h-100">
                             <Image
                                 src="/images/Header/Co2.png"
@@ -24,11 +24,11 @@ const Header = () => {
                         </div>
                     </h1>
                     <h1 className="md:text-7xl text-[44px] items-center">
-                        <span className="text-[#04A6E7]">marketplace</span>{" "}
-                        powered by carbon credit NFTs
+                        Easing the path to <span className="text-[#04A6E7]">Net 0</span>
+                        
                     </h1>
                     <h1 className="text-base md:text-xl md:my-4 items-center normal-case text-gray-400 font-poppins">
-                        Greenvest is an innovative platform providing smart and
+                        Tokere is an innovative platform providing smart and
                         fractional ESG solutions. You can produce, finance and
                         consume fractionalized carbon credit NFTs using the
                         ecosystem.

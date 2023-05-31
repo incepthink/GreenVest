@@ -19,62 +19,53 @@ const Services = () => {
             </p>
         </div>
         <div className='flex flex-col md:flex-row md:max-w-[90%] w-100 mx-auto justify-evenly items-center my-12 font-poppins'>
-            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100 md:h-[55vh] my-4 mx-auto items-center justify-center bg-[#04A6E7] hover:bg-white text-white hover:text-black rounded-lg'>
-                <div className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
-                    <Image  src="/images/services/skyline.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
-                </div>
-                <div className='text-center items-center justify-center flex-col my-4'>
-                    <h2 className='text-xl font-semibold'>
-                        Enterprise
-                    </h2>
-                    <h2 className='text-xl font-semibold'>
-                        (large, medium, small)
-                    </h2>
-                    <p className='text-lg font-light my-4 px-8'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem
-                    </p>
-                </div>
-                <div className='bg-white flex items-center justify-center rounded-full overflow-hidden w-10 h-10 mx-auto my-8'>
-                    <ArrowRightAltIcon className='text-[#4C40F7]' />
-                </div>
-            </div>
-
-            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100 md:h-[55vh] my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] gover:text-white '>
+        
+            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center rounded-lg bg-[#04A6E7] text-white '>
                 <div  className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
                     <Image  src="/images/services/apartment.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
                 </div>
                 <div className='text-center items-center justify-center flex-col my-4'>
                     <h2 className='text-xl font-semibold'>
-                        Commercial 
+                        Enterprise 
                     </h2>
-                    <h2 className='text-xl font-semibold'>
-                        Property Developer
-                    </h2>
-                    <p className='text-lg font-light my-4 px-8'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem
+                    <p className='font-light my-2 px-3'>
+                        All enterprises be it large, medium and small, committed to Net 0 for a sustainable business, can start with offsetting their power consumptions with our curated and tokenised RECs.
                     </p>
                 </div>
-                <div className='bg-slate-200 flex items-center justify-center rounded-full overflow-hidden w-10 h-10 mx-auto my-8'>
+                <div className='bg-slate-200 flex items-center justify-center rounded-full overflow-hidden w-10 h-10 mx-auto my-4'>
+                    <ArrowRightAltIcon className='text-[#4C40F7]' />
+                </div>
+            </div>
+            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] hover:text-white '>
+                <div  className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
+                    <Image  src="/images/services/apartment.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
+                </div>
+                <div className='text-center items-center justify-center flex-col my-4'>
+                    <h2 className='text-xl font-semibold'>
+                        Developers 
+                    </h2>
+                    <p className='font-light my-2 px-4'>
+                    Irrespective of the scale of the asset, every building has an immense opportunity to upgrade its value for higher returns. You can start by offsetting your power consumption with our curated and tokenised RECs. 
+                    </p>
+                </div>
+                <div className='bg-slate-200 flex items-center justify-center rounded-full overflow-hidden w-10 h-10 mx-auto my-4'>
                     <ArrowRightAltIcon className='text-[#4C40F7]' />
                 </div>
             </div>
 
-            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100 md:h-[55vh] my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] gover:text-white cursor-pointer'>
-                <div className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
-                    <Image  src="/images/services/industrial.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
+            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] hover:text-white '>
+                <div  className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
+                    <Image  src="/images/services/apartment.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
                 </div>
                 <div className='text-center items-center justify-center flex-col my-4'>
                     <h2 className='text-xl font-semibold'>
-                        Residential
+                        Individuals 
                     </h2>
-                    <h2 className='text-xl font-semibold'>
-                        {/* (large, medium, small) */}
-                    </h2>
-                    <p className='text-lg font-light mt-8 my-4 px-8'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem
+                    <p className='font-light my-2 px-1'>
+                    Discerning, globally conscious and trendsetting individuals also how have an opportunity to contribute to global Net 0. Connect with us to offset your power consumption with our curated and tokenised RECs. 
                     </p>
                 </div>
-                <div className='bg-slate-200 flex items-center justify-center rounded-full overflow-hidden w-10 h-10 mx-auto mt-12 my-8'>
+                <div className='bg-slate-200 flex items-center justify-center rounded-full overflow-hidden w-10 h-10 mx-auto my-4'>
                     <ArrowRightAltIcon className='text-[#4C40F7]' />
                 </div>
             </div>

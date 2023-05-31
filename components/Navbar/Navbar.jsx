@@ -15,7 +15,7 @@ function MobileNav({open, setOpen}) {
            
                 <Link className="flex items-center text-xl font-semibold" href="/">
                     <Image width={55} height={41} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}} />
-                    <span className="text-[#00337C]">Green</span><span className="text-[#88E828]">vest</span>
+                    <span className="text-[#00337C]">Tokere</span>
                 </Link>
 
             </div>
@@ -35,21 +35,7 @@ function MobileNav({open, setOpen}) {
                 >
                     Services
                 </Link>
-                <Link 
-                    className={`my-4 ${router.pathname=='/impact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `} 
-                    href="/impact" 
-                    onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
-                >
-                    Our Impact
-                </Link>
-                <Link 
-                    className={`my-4 ${router.pathname=='/careers' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `} 
-                    href="/careers" 
-                    onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
-                >
-                    Careers
-                </Link>
-                <Link 
+                s<Link 
                     className={`my-4 ${router.pathname=='/contact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `} 
                     href="/contact" 
                     onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
@@ -123,7 +109,7 @@ const Navbar = () => {
             <div className="w-3/12 flex items-center">
                 <Link className="flex items-center text-2xl font-semibold" href="/">
                     <Image width={75} height={60} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}}  />
-                    <span className="text-[#00337C]">Green</span><span className="text-[#88E828]">vest</span>
+                    <span className="text-[#00337C]">Tokere</span>
                 </Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">
@@ -149,18 +135,6 @@ const Navbar = () => {
                         className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${(router.pathname=='/services' || router.pathname=='/services/enterprise') && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
                     >
                         Services
-                    </Link>
-                    <Link 
-                        href="/impact" 
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${router.pathname=='/impact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
-                    >
-                        Our Impact
-                    </Link>
-                    <Link 
-                        href="/careers" 
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${router.pathname=='/careers' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
-                    >
-                        Careers
                     </Link>
                     <Link 
                         href="/contact" 
