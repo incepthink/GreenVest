@@ -42,13 +42,7 @@ const Footer = () => {
                 <div className='grid grid-cols-2'>
                     <Link href='/' className='mx-8 my-4'>Home</Link>
                     <Link href='/' className='mx-8 my-4'>Contact Us</Link>
-                    <Link href='/' className='mx-8 my-4'>Know More</Link>
-                    <Link href='/' className='mx-8 my-4'>Blog</Link>
-                    <Link href='/' className='mx-8 my-4'>Services</Link>
-                    <Link href='/' className='mx-8 my-4'>Our Impact</Link>
-                    <Link href='/' className='mx-8 my-4'>Licenses</Link>
-                    <Link href='/' className='mx-8 my-4'>Protected</Link>
-                    <Link href='/' className='mx-8 my-4'>Careers</Link>
+                    <Link href='/' className='mx-8 my-4'>NFTS</Link>
                 </div>
             </div>
             <div className='flex flex-col px-8 text-white'>
