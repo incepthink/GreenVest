@@ -4,20 +4,11 @@ import Link from 'next/link'
 
 const teamMembers = [
   {
-    name: 'Jessca Arow',
-    role: 'CEO',
-    image: '/images/person-1.png',
+    name: 'Prafulla Agarwal',
+    role: 'Founding Team',
+    image: '/images/prafulla.png',
   },
-  {
-    name: 'Kathleen Smith',
-    role: 'CTO',
-    image: '/images/person-2.png',
-  },
-  {
-    name: 'Jessca Arow',
-    role: 'Manager',
-    image: '/images/person-3.png',
-  },
+  
 ]
 
 const MeetOurTeam = () => {
@@ -39,8 +30,8 @@ const MeetOurTeam = () => {
                             <div className='p-2'>
                                 <div className="h-full w-full">
                                     <Image
-                                        width={1920}
-                                        height={1080}
+                                        width={350}
+                                        height={350}
                                         style={{"objectFit":"contain"}}
                                         src={member.image}
                                         alt={member.name}

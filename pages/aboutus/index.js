@@ -20,7 +20,6 @@ export default function Home() {
 
           </h1> */}
           <div className="max-w-screen md:h-[68vh] h-[50vh] bg-home-background-1 bg-top bg-cover" />
-          <RecentProjects />
           <MeetOurTeam />
           <Footer />
       </div>

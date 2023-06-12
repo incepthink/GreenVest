@@ -11,7 +11,6 @@ const Services = () => {
         <div className='md:w-[90%] w-100 mx-auto flex-col border-b-2 border-gray-300'>
             <div className='flex justify-between items-center'>
                 <h2 className="text-4xl font-bold uppercase tracking-wide">services</h2>
-                <h2><Link href="/services" className="text-green-500 font-semibold underline mt-8 underline-offset-4">Explore</Link></h2>
             </div>
             <p className='text-lg mt-4 text-gray-500 leading-8 pb-4'>
                 At our company, we pride ourselves on delivering a level of service that consistently exceeds our customers expectations, 
@@ -20,7 +19,7 @@ const Services = () => {
         </div>
         <div className='flex flex-col md:flex-row md:max-w-[90%] w-100 mx-auto justify-evenly items-center my-12 font-poppins'>
         
-            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center rounded-lg bg-[#04A6E7] text-white '>
+            <div  className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center rounded-lg bg-[#04A6E7] text-white '>
                 <div  className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
                     <Image  src="/images/services/apartment.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
                 </div>
@@ -36,7 +35,7 @@ const Services = () => {
                     <ArrowRightAltIcon className='text-[#4C40F7]' />
                 </div>
             </div>
-            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] hover:text-white '>
+            <div  className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] hover:text-white '>
                 <div  className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
                     <Image  src="/images/services/apartment.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
                 </div>
@@ -53,7 +52,7 @@ const Services = () => {
                 </div>
             </div>
 
-            <div onClick={() => router.push('/services')} className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] hover:text-white '>
+            <div  className='md:w-[30%] w-100  my-4 mx-auto items-center justify-center bg-white text-black rounded-lg hover:bg-[#04A6E7] hover:text-white '>
                 <div  className='rounded-full overflow-hidden mx-auto mt-8 w-16 p-3 h-16 flex items-center justify-center bg-[#04A6E7]'>
                     <Image  src="/images/services/apartment.png" alt="skyline" width={50} height={50} style={{"objectFit":"contain"}} />
                 </div>

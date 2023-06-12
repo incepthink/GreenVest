@@ -174,7 +174,7 @@ const Marketplace = () => {
                     )}
                 </div>
             </Modal>
-            <div className="w-full h-screen bg-home-background bg-center  flex flex-row items-stretch bg-cover relative overflow-hidden ">
+            <div className="absolute w-full h-screen bg-home-background bg-center  flex flex-row items-stretch bg-cover relative overflow-hidden ">
                 
                 <Head>
                     <title>Tokere&apos;s NFT</title>
@@ -205,10 +205,10 @@ const Marketplace = () => {
 
 
                 {/* nft page content */}
-                <div className=' md:relative md:min-w-[500px] md:m-16 m-0 md:w-[40%] w-[100%] flex bg-[#04A6E7] bg-gradient-to-b from-[#22d3ee] to-[#0891b2] rounded-0 md:rounded-md items-center  overflow-hidden '>
+                <div className=' md:min-w-[500px] md:mx-4 md:my-5 m-0 md:w-[35%] w-[100vw] flex bg-[#04A6E7] bg-gradient-to-b from-[#22d3ee] to-[#0891b2] rounded-md md:rounded-md items-center  overflow-hidden '>
                     
                     {/* nft page content with scroll */}
-                    <div className='w-full md:p-8 p-4 flex flex-col   overflow-x-hidden overflow-y-auto scroll-smooth hover:scroll-auto'>
+                    <div className='w-full p-8 flex flex-col h-full overflow-x-hidden overflow-y-auto scroll-smooth hover:scroll-auto custom-scrollbar'>
 
                         {/* nft page content top */}
                         <div>
@@ -216,25 +216,31 @@ const Marketplace = () => {
                             
                             
                             {/* information content */}
-                            <div className='w-full flex flex-col md:my-2 my-12 mb-3'>
-
+                            <div className='w-full flex flex-col font-poppins my-4'>
                                 {/* NFT NAME */}
-                                <span className='mb-1.5 text-4xl text-white font-bold'>Tokere CC NFT</span>
-
+                                <span className='text-xl text-white font-regular my-2'>Name of NFT</span>
+                                <span
+                                    className='bg-[#68CAF1] p-3 text-2xl text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
+                                >
+                                    Tokere CC NFT
+                                </span>
                             </div>
 
-                            <div className="md:hidden w-full flex flex-col my-2 mb-3">
-                                <img src='/images/sample_nft.png' alt="sample nft" style={{width:'90%','margin':'0 auto', borderRadius:'0.75rem'}} />
+
+                            <div className='w-full flex flex-col font-poppins my-2'>
+                                {/* NFT NAME */}
+                                <span className='text-lg text-white font-regular my-2'>Description</span>
+                                <span
+                                    className='bg-[#68CAF1] p-3 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
+                                >
+                                    This is a FREE CLAIM NFT for the early supporters of Tokere as we make the world greener.Each NFT represents 1kg of CO2 that has been sequestered from the environment. Together, the 1,000 NFTs make up a single carbon credit.<br/> View the certificate : <Link className='underline text-white font-bold' href='https://drive.google.com/file/d/1RS0usksdEJSgWYJnTP3Ax8TwuyinB5wy/view'>here</Link> 
+                                </span>
+                            </div>    
+                            <div className="w-full flex flex-col my-4">
+                                <img src='/images/sample_nft.png' alt="sample nft" className="md:w-[50%] w-[85%]" style={{'margin':'0 auto', borderRadius:'0.75rem'}} />
                             </div>
 
-                            {/* nft description */}
-                            <div className='w-full flex flex-col my-2 mb-3'>
-
-                                {/* NFT description */}
-                                <span className='mb-1.5 text-xl text-white font-semibold '>This is a FREE CLAIM NFT for the early supporters of Greenvest as we make the world greener.Each NFT represents 1kg of CO2 that has been sequestered from the environment. Together, the 1,000 NFTs make up a single carbon credit.For more details on the Carbon Credit. <br/> View the certificate : <Link className='underline text-white font-bold' href='https://drive.google.com/file/d/1RS0usksdEJSgWYJnTP3Ax8TwuyinB5wy/view'>here</Link> </span>
-
-                            </div>
-                            <div className='w-full flex my-2 mx-auto'>
+                            <div className='w-full flex my-2 p-1 mx-auto'>
                                 {
                                     
                                     nftBalance == -1 ? <></> : 
@@ -243,13 +249,13 @@ const Marketplace = () => {
 
                             </div>
                             <div className="w-full flex justify-center items-center">
-                                <button onClick={mintNFTToWallet} className='md:w-[70%] w-[80%] self-center bg-[#0e7490] px-2 py-4 rounded-full text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
+                                <button onClick={mintNFTToWallet} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
                                     Claim To Wallet
                                 </button>
                             </div>
                                 {/* credits corner */}
                             <Link href='https://www.hashcase.co'>
-                                <div className='md:w-[60%] w-[70%] mx-auto self-center bg-[#0e7490] px-2 py-4 mb-8 rounded-full text-white border-2 border-[#3e4eaa98] border-solid flex justify-center items-center cursor-pointer'>
+                                <div className='md:w-[50%] w-[80%] mx-auto self-center bg-[#0e7490] px-1 py-2 rounded-full text-white border-2 border-[#3e4eaa98] border-solid flex justify-center items-center cursor-pointer'>
                                     Powered by {" "} 
                                     <img className='h-5 ml-2 text-white' src='/images/hashcaselogo.png' alt='hashcase logo' />
                                 </div>
@@ -260,10 +266,6 @@ const Marketplace = () => {
                     </div>
 
 
-                </div>
-                <div className='md:flex flex-1 hidden relative  justify-center  p-6 items-center'>
-        
-                    <img src='/images/sample_nft.png' alt='nft img' style={{ width:'82%', borderRadius:'0.75rem'}} />
                 </div>
                 
             </div>
