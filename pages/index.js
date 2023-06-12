@@ -4,6 +4,7 @@ import { StoreContext } from "@/utils/Store";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import Modal from "react-modal";
 import { PropagateLoader } from "react-spinners";
@@ -28,6 +29,7 @@ const customStyles = {
 };
 
 const Marketplace = () => {
+    const router = useRouter();
     const token = env.HASHCASE_API_KEY;
     const { state, dispatch } = useContext(StoreContext);
     const [transactionHash, setTransactionHash] = useState("");
@@ -92,6 +94,7 @@ const Marketplace = () => {
             wallet_address = state.user.wallet_address;
             setAccountAddress(state.user.wallet_address);
         }else{
+            router.push('/signin')
             return;
         }
         openLoadingModal();
