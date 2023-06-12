@@ -79,11 +79,11 @@ const Header = () => {
                 </div>
                 <div className="flex items-center font-poppins normal-case md:hidden">
                     <Link
-                        href="/signup"
+                        href="/signin"
                         className="text-white  bg-[#04A6E7] rounded-[1.5rem] px-4 py-2 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 font-poppins"
                         style={{ fontSize: "1.25rem" }}
                     >
-                        Sign Up
+                        Sign In
                     </Link>
                     <Link
                         href="/watch-video"
