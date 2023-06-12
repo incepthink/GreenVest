@@ -240,19 +240,22 @@ const Marketplace = () => {
                                 <img src='/images/sample_nft.png' alt="sample nft" className="md:w-[50%] w-[85%]" style={{'margin':'0 auto', borderRadius:'0.75rem'}} />
                             </div>
 
-                            <div className='w-full flex my-2 p-1 mx-auto'>
+                            <div className='w-full flex my-2 p-1 mx-auto text-center justify-center'>
                                 {
                                     
                                     nftBalance == -1 ? <></> : 
-                                        nftBalance > 0 && <span className="mt-2 text-white font-bold">Claimed! You have {nftBalance} Carbon Credit NFTs</span> 
+                                        nftBalance > 0 && <span className="mt-2 text-white text-center font-bold">You have {nftBalance} Carbon Credit NFTs claimed in your <Link href='/myWallet' className="underline">Wallet</Link></span> 
                                 }
 
                             </div>
-                            <div className="w-full flex justify-center items-center">
-                                <button onClick={mintNFTToWallet} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
-                                    Claim To Wallet
-                                </button>
-                            </div>
+                            {
+                                nftBalance < 0 && 
+                                <div className="w-full flex justify-center items-center">
+                                    <button onClick={mintNFTToWallet} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
+                                        Claim To Wallet
+                                    </button>
+                                </div>
+                            }
                                 {/* credits corner */}
                             <Link href='https://www.hashcase.co'>
                                 <div className='md:w-[50%] w-[80%] mx-auto self-center bg-[#0e7490] px-1 py-2 rounded-full text-white border-2 border-[#3e4eaa98] border-solid flex justify-center items-center cursor-pointer'>
