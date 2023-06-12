@@ -231,9 +231,9 @@ const Marketplace = () => {
                                 {/* NFT NAME */}
                                 <span className='text-lg text-white font-regular my-2'>Description</span>
                                 <span
-                                    className='bg-[#68CAF1] p-3 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
+                                    className='bg-[#68CAF1] p-4 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
                                 >
-                                    This is a FREE CLAIM NFT for the early supporters of Tokere as we make the world greener.Each NFT represents 1kg of CO2 that has been sequestered from the environment. Together, the 1,000 NFTs make up a single carbon credit.<br/> View the certificate : <Link className='underline text-white font-bold' href='https://drive.google.com/file/d/1RS0usksdEJSgWYJnTP3Ax8TwuyinB5wy/view'>here</Link> 
+                                    This is a FREE CLAIM NFT for the early supporters of Tokere as we make the world greener.Each NFT represents 1kg of CO2 that has been sequestered from the environment. Together, the 1,000 NFTs make up a single carbon credit. <Link className='underline text-white font-bold' href='https://drive.google.com/file/d/1RS0usksdEJSgWYJnTP3Ax8TwuyinB5wy/view'>Certificate</Link> 
                                 </span>
                             </div>    
                             <div className="w-full flex flex-col my-4">
