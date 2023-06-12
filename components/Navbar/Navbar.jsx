@@ -7,32 +7,24 @@ import { useRouter } from "next/router"
 import { useContext, useEffect, useState } from "react"
 
 
-function MobileNav({open, setOpen}) {
+function MobileNav({open, setOpen ,user, anchorEl, openDropdown, handleClose, handleClick,dispatch}) {
     const router = useRouter();
     return (
-        <div
-            className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${
-                open ? "-translate-x-0" : "-translate-x-full"
-            } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
-        >
-            <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
-                {" "}
-                {/*logo container*/}
+        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
+            <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
                 <Link
-                    className="flex items-center text-xl font-semibold"
+                    className="flex items-center text-2xl font-semibold"
                     href="/"
                 >
                     <Image
-                        width={55}
-                        height={41}
+                        width={75}
+                        height={60}
                         src="/images/Logo.png"
                         alt="website logo"
                         style={{ objectFit: "contain" }}
                     />
-                    <span className="text-[#00337C]">Green</span>
-                    <span className="text-[#88E828]">vest</span>
+                    <span className="text-[#00337C]">Tokere</span>
                 </Link>
-
             </div>
             <div className="flex flex-col ml-4 text-[#00337C]  text-2xl font-nunito">
                 
@@ -41,44 +33,33 @@ function MobileNav({open, setOpen}) {
                     href="/" 
                     onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
                 >
-                    Home
+                    NFTs
                 </Link>
                 <Link 
-                    className={`my-4 ${router.pathname=='/services' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `} 
-                    href="/services" 
+                    className={`my-4 ${router.pathname=='/services' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2 '} `} 
+                    href="/aboutus" 
                     onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
                 >
-                    Services
-                </Link>
-                <Link
-                    className={`my-4 ${
-                        router.pathname == "/contact" &&
-                        "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
-                    } `}
-                    href="/contact"
-                    onClick={() =>
-                        setTimeout(() => {
-                            setOpen(!open);
-                        }, 100)
-                    }
-                >
-                    Contact Us                    
-                </Link>
-                <Link 
-                    className={`my-4 ${router.pathname=='/contact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `} 
-                    href="/marketplace" 
-                    onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
-                >
-                    NFTs                    
+                    About Us
                 </Link>
                 <Link 
                     href='/signin'
                 >
-                    <button
-                        className="my-4 bg-[#04A6E7] text-white rounded-3xl px-4 py-2"
-                    >
-                        Sign In
-                    </button>
+                    {
+                        user ?
+                        <button
+                            className="my-4 bg-[#04A6E7] text-white rounded-3xl px-4 py-2"
+                            id="basic-button"
+                            aria-controls={openDropdown ? 'basic-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={openDropdown ? 'true' : undefined}
+                            onClick={handleClick}
+                        >
+                            My Account
+                        </button>
+                        :<button onClick={()=>{router.push('/signin'); setTimeout(()=>{setOpen(!open)},100) }} className="my-4 bg-[#04A6E7] text-white rounded-3xl px-4 py-2">Sign In</button>
+                    }
+                    
                 </Link>
             </div>  
         </div>
@@ -126,10 +107,19 @@ const Navbar = () => {
         };
 
     return (
-        <nav className="flex filter z-50 static drop-shadow-md bg-white font-oswald px-4 py-4 h-20 items-center">
-            <MobileNav open={open} setOpen={setOpen} />
+        <nav className="relative z-50 flex filter drop-shadow-md bg-white px-4 py-4 h-20 justify-center items-center">
+            <MobileNav 
+                open={open} 
+                setOpen={setOpen} 
+                user={state.user} 
+                handleClick={handleClick} 
+                handleClose={handleClose} 
+                openDropdown={openDropdown} 
+                anchorEl={anchorEl} 
+                dispatch={dispatch}
+            />
             <div className="w-3/12 flex items-center">
-                <Link
+            <Link
                     className="flex items-center text-2xl font-semibold"
                     href="/"
                 >
@@ -140,53 +130,36 @@ const Navbar = () => {
                         alt="website logo"
                         style={{ objectFit: "contain" }}
                     />
-                    <span className="text-[#00337C]">Green</span>
-                    <span className="text-[#88E828]">vest</span>
+                    <span className="text-[#00337C]">Tokere</span>
                 </Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">
 
-                <div className={`z-50 flex relative w-8 ${open ? 'h-8' : 'h-6'}  flex-col justify-between items-center md:hidden`} onClick={() => {
+                <div className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
                     setOpen(!open)
                 }}>
                     {/* hamburger button */}
                     <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
-                    <span className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${open ? "hidden" : "w-full"}`} />
+                    <span className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
                     <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
                 </div>
 
-                <div className="hidden md:flex text-[#00337C] text-lg font-nunito">
+                <div className="hidden md:flex justify-center items-center text-[#00337C] text-lg font-nunito ">
                     <Link 
                         href="/" 
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${router.pathname=='/' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
-                    >
-                        Home
-                    </Link>
-                    <Link 
-                        href="/services" 
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${(router.pathname=='/services' || router.pathname=='/services/enterprise') && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
-                    >
-                        Services
-                    </Link>
-                    <Link
-                        href="/contact"
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${
-                            router.pathname == "/contact" &&
-                            "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
-                        } `}
-                    >
-                        Contact Us
-                    </Link>
-                    <Link 
-                        href="/marketplace" 
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${router.pathname=='/contact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
+                        className={`mx-4 hover:scale-105 duration-150 items-center justify-center ease-in delay-150 ${router.pathname=='/' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
                     >
                         NFTs
                     </Link>
-                </div>
-                {
+                    <Link 
+                        href="/aboutus" 
+                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${(router.pathname=='/aboutus' || router.pathname=='/services/enterprise') && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
+                    >
+                        About Us
+                    </Link>
+                    {
                     state.user ? 
-                    <div className="hidden md:flex text-lg font-nunito items-center">
+                    <div className="hidden md:flex text-lg justify-center font-nunito items-center">
                         {/* <button 
                             onClick={() => {logoutHandler(dispatch)}}
                             className="mx-4 text-white bg-[#04A6E7] rounded-[1.5rem] px-4 py-2 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150"
@@ -231,10 +204,61 @@ const Navbar = () => {
                     </Link>
                 </div>  
                 }
-                
+                </div>
             </div>
         </nav>
     )
 }
 
 export default Navbar
+
+{/* <nav className="flex filter z-50 static drop-shadow-md bg-white font-oswald px-4 py-4 h-20 items-center">
+            <MobileNav open={open} setOpen={setOpen} />
+            <div className="w-3/12 flex items-center">
+                <Link
+                    className="flex items-center text-2xl font-semibold"
+                    href="/"
+                >
+                    <Image
+                        width={75}
+                        height={60}
+                        src="/images/Logo.png"
+                        alt="website logo"
+                        style={{ objectFit: "contain" }}
+                    />
+                    <span className="text-[#00337C]">To</span>
+                </Link>
+            </div>
+            <div className="w-9/12 flex justify-end items-center">
+
+                <div className={`z-50 flex relative w-8 ${open ? 'h-8' : 'h-6'}  flex-col justify-between items-center md:hidden`} onClick={() => {
+                    setOpen(!open)
+                }}>
+                    {/* hamburger button */}
+        //             <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
+        //             <span className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${open ? "hidden" : "w-full"}`} />
+        //             <span className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
+        //         </div>
+
+        //         <div className="hidden md:flex text-[#00337C] text-lg font-nunito">
+                    
+        //             <Link
+        //                 href="/contact"
+        //                 className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${
+        //                     router.pathname == "/contact" &&
+        //                     "underline underline-offset-[6px] decoration-[#00337C] decoration-2"
+        //                 } `}
+        //             >
+        //                 Contact Us
+        //             </Link>
+        //             <Link 
+        //                 href="/marketplace" 
+        //                 className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${router.pathname=='/contact' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
+        //             >
+        //                 NFTs
+        //             </Link>
+        //         </div>
+                
+                
+        //     </div>
+        // </nav> */}

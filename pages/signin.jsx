@@ -37,16 +37,16 @@ const Singin = () => {
             <div className="max-w-screen max-h-screen flex overflow-hidden justify-center items-center my-12 md:my-0">
                 <div className="md:w-[50%] max-w-screen flex justify-center items-center">
                     <div className="flex flex-col">
-                        <h1 className="font-bebas text-4xl uppercase">
+                        <h1 className="font-bebas text-4xl text-center uppercase">
                             Welcome There!
                         </h1>
-                        <p className="text-[#667085] mb-4">
+                        <p className="text-[#667085] mb-4 text-center">
                             Select one of the ways to sign in.
                         </p>
                         <form className="flex flex-col w-full items-center">
                             <button
                                 onClick={googleLoginHandler}
-                                className="w-full flex items-center justify-center bg-transparent hover:bg-[#d3e4ff] border-2 border-slate-400 py-6 px-4 rounded-lg mt-2"
+                                className="w-full flex items-center justify-center bg-transparent hover:bg-[#d3e4ff] border-2 border-slate-400 py-2 px-4 text-lg font-semibold rounded-lg my-2"
                             >
                                 <Image
                                     src="/images/googleLogo.png"
@@ -60,7 +60,7 @@ const Singin = () => {
                             </button>
                             <button
                                 onClick={metamaskLoginHandler}
-                                className="w-full flex items-center justify-center bg-transparent hover:bg-[#d3e4ff] border-2 border-slate-400 py-2 px-4 rounded-lg mt-2"
+                                className="w-full flex items-center justify-center bg-transparent hover:bg-[#d3e4ff] border-2 border-slate-400 py-2 px-4 text-lg font-semibold rounded-lg mt-2"
                             >
                                 <Image
                                     src="/images/metamaskLogo.png"
@@ -72,7 +72,7 @@ const Singin = () => {
                             </button>
                             <button
                                 onClick={googleLoginHandler}
-                                className="w-full flex items-center justify-center bg-transparent hover:bg-[#d3e4ff] border-2 border-slate-400 py-2 px-4 rounded-lg mt-2"
+                                className="w-full flex items-center justify-center bg-transparent hover:bg-[#d3e4ff] border-2 border-slate-400 py-2 px-4 text-lx font-semibold rounded-lg mt-2"
                             >
                                 <Image
                                     src="/images/walletConnectLogo.png"

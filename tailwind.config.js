@@ -24,6 +24,18 @@ module.exports = {
       "service-background": 'url("/images/OurServiceBG.png")',
       "img-background":'url("/images/earth-bg.png")'
     },
+    // colors:{
+    //   'light-green':'#a5f3fc',
+    //   'medium-green':'#22d3ee',
+    //   'less-dark-green':'#06b6d4',
+    //   'dark-green':'#0891b2',
+    //   'darkest-green':'#0e7490',
+    //   'white':'white',
+    //   'blue-600':'#0891b2',
+    //   'gray':'gray',
+    //   'indigo-900':'#38bdf8',
+    //   'cyan-500':'#06b6d4'
+    // },
     scrollbar: {
       width: '0.5em',
       height:'0.25em' 
@@ -35,7 +47,15 @@ module.exports = {
       backgroundColor: '#888', 
       borderRadius: '10px', 
     },
-    extend: {},
+    extend: {
+      zIndex:{
+        '1':'1',
+        '50':'50',
+      },
+      backgroundImage: {
+        "home-background": 'url("/images/bg.png")',
+      }
+    },
   },
   plugins: [],
 }
