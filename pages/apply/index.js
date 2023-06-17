@@ -64,7 +64,7 @@ const Apply = () => {
             return;
         }
 
-        if(gstNo.length > 15 && gstNo.length !== 0) {
+        if(gstNo.length !== 15 && gstNo.length !== 0) {
             toast.error("Incorrect GST number");
             return;
         }
