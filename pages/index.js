@@ -233,7 +233,7 @@ const Marketplace = () => {
                                 <span
                                     className='bg-[#68CAF1] p-4 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
                                 >
-                                    This is a FREE CLAIM NFT for the early supporters of Tokere as we make the world greener.Each NFT represents 1kg of CO2 that has been sequestered from the environment. Together, the 1,000 NFTs make up a single carbon credit. <Link className='underline text-white font-bold' href='https://drive.google.com/file/d/1RS0usksdEJSgWYJnTP3Ax8TwuyinB5wy/view'>Certificate</Link> 
+                                    This is a FREE CLAIM NFT for the early supporters of Tokere as we make the world greener. Each NFT represents 1kg of CO2 that has been sequestered from the environment. Together, the 1,000 NFTs make up a single carbon credit.<Link className='underline text-white font-bold' href='https://drive.google.com/file/d/1RS0usksdEJSgWYJnTP3Ax8TwuyinB5wy/view'>Certificate</Link> 
                                 </span>
                             </div>    
                             <div className="w-full flex flex-col my-4">
@@ -256,9 +256,16 @@ const Marketplace = () => {
                                     </button>
                                 </div>
                             }
+
+                                <div className="w-full flex justify-center items-center">
+                                    <button onClick={() => router.push('/apply')} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
+                                        Place Order for large quantity
+                                    </button>
+                                </div>
+
                                 {/* credits corner */}
                             <Link href='https://www.hashcase.co'>
-                                <div className='md:w-[50%] w-[80%] mx-auto self-center bg-[#0e7490] px-1 py-2 rounded-full text-white border-2 border-[#3e4eaa98] border-solid flex justify-center items-center cursor-pointer'>
+                                <div className='md:w-[60%] w-[80%] mx-auto self-center bg-[#0e7490] p-2 rounded-full text-white border-2 border-[#3e4eaa98] border-solid flex justify-center items-center cursor-pointer'>
                                     Powered by {" "} 
                                     <img className='h-5 ml-2 text-white' src='/images/hashcaselogo.png' alt='hashcase logo' />
                                 </div>

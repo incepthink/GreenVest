@@ -58,7 +58,7 @@ const Singin = () => {
                                     Sign in with Google
                                 </span>
                             </button>
-                            <button
+                            {/* <button
                                 onClick={metamaskLoginHandler}
                                 className="w-full flex items-center justify-center bg-transparent hover:bg-[#d3e4ff] border-2 border-slate-400 py-2 px-4 text-lg font-semibold rounded-lg mt-2"
                             >
@@ -81,7 +81,7 @@ const Singin = () => {
                                     height={20}
                                 />
                                 <span className="mx-2">Wallet Connect</span>
-                            </button>
+                            </button> */}
                         </form>
                     </div>
                 </div>
