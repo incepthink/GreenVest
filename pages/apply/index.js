@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar/Navbar'
 import { StoreContext } from '@/utils/Store'
+import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useContext, useEffect, useState } from 'react'
@@ -114,7 +115,9 @@ const Apply = () => {
                 </div>
             </Modal>
             <div className="absolute w-full h-screen md:bg-home-background bg-home-background-2 bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
-
+                <Head>
+                    <title>Place Order</title>
+                </Head>
                {/* nft page content */}
                 <div className=' md:min-w-[500px] md:mx-4 md:my-5 m-0 md:w-[35%] w-[100vw] flex md:bg-[#04A6E7]  rounded-md md:rounded-md items-center  overflow-hidden '>
                         
@@ -129,7 +132,7 @@ const Apply = () => {
                                 {/* information content */}
                                 <form onSubmit={handleSubmit} >
                                     <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Username</span>
+                                        <span className='text-md text-white font-regular my-2'>Enter Your Username *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 placeholder:text-white text-md text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="text"
@@ -143,21 +146,10 @@ const Apply = () => {
                                     </div>
 
 
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Email</span>
-                                        <input
-                                            className='bg-[#68CAF1] p-2 text-md text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
-                                            type="email"
-                                            value={email}
-                                            onChange={(e) => {
-                                                setEmail(e.target.value);
-                                            }} 
-                                            required 
-                                        />
-                                    </div>
+                                    
 
                                     <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Phone Number</span>
+                                        <span className='text-md text-white font-regular my-2'>Enter Your Phone Number *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="text"
@@ -171,7 +163,7 @@ const Apply = () => {
                                     </div>
                                     
                                     <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Address</span>
+                                        <span className='text-md text-white font-regular my-2'>Enter Your Address *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="text"
@@ -184,22 +176,10 @@ const Apply = () => {
                                         />
                                     </div>
 
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Wallet Address</span>
-                                        <input
-                                            className='bg-[#68CAF1] p-2 text-md text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
-                                            type="text"
-                                            value={walletAddress}
-                                            onChange={(e) => {
-                                                setWalletAddress(e.target.value);
-                                            }}  
-                                            required
-                                        />
-                                    </div>
                                         
                                     
                                     <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Company Name</span>
+                                        <span className='text-md text-white font-regular my-2'>Enter Your Company Name *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 placeholder:text-white text-md text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="text"
@@ -213,7 +193,7 @@ const Apply = () => {
                                     </div>
 
                                     <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your GST Number</span>
+                                        <span className='text-md text-white font-regular my-2'>Enter Your GST Number </span>
                                         <input
                                             className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="number"
@@ -226,7 +206,7 @@ const Apply = () => {
                                     </div>
 
                                     <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Quantity</span>
+                                        <span className='text-md text-white font-regular my-2'>Enter Quantity *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="number"
