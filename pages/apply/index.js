@@ -30,6 +30,8 @@ const Apply = () => {
     const router = useRouter();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [phoneNo, setPhoneNo] = useState('');
+    const [address, setAddress] = useState('');
     const [companyName, setCompanyName ] = useState('');
     const [gstNo, setGstNo] = useState('');
     const [quantity,setQuantity] = useState('');
@@ -51,9 +53,29 @@ const Apply = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+        if(name === '' || email === '' || phoneNo === '' || address === '' || walletAddress === ''
+        || companyName === '' || quantity === '') {
+            toast.error("Please fill all the details")
+            return;
+        }
+        if(phoneNo.length !== 10) {
+            toast.error("Incorrect phone number !!");
+            return;
+        }
+
+        if(gstNo.length > 15 && gstNo.length !== 0) {
+            toast.error("Incorrect GST number");
+            return;
+        }
+        if(quantity <= 0) {
+            toast.error("Quantity should be greated than 0")
+            return;
+        }
         let form = {
             name,
             email,
+            phoneNo,
+            address,
             walletAddress,
             companyName,
             gstNo,
@@ -70,7 +92,7 @@ const Apply = () => {
         });
         console.log(await rawResponse.json());
         setIsLoadingModalOpen(false);
-
+        toast.success("Submitted Successfully!!");
 
     }
 
@@ -91,10 +113,10 @@ const Apply = () => {
                     
                 </div>
             </Modal>
-            <div className="absolute w-full h-screen bg-home-background bg-center  flex flex-row items-stretch bg-cover relative overflow-hidden ">
+            <div className="absolute w-full h-screen md:bg-home-background bg-home-background-2 bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
 
-                {/* nft page content */}
-                <div className=' md:min-w-[500px] md:mx-4 md:my-5 m-0 md:w-[35%] w-[100vw] flex bg-[#04A6E7] bg-gradient-to-b from-[#22d3ee] to-[#0891b2] rounded-md md:rounded-md items-center  overflow-hidden '>
+               {/* nft page content */}
+                <div className=' md:min-w-[500px] md:mx-4 md:my-5 m-0 md:w-[35%] w-[100vw] flex md:bg-[#04A6E7]  rounded-md md:rounded-md items-center  overflow-hidden '>
                         
                         {/* nft page content with scroll */}
                         <div className='w-full p-8 flex flex-col h-full overflow-x-hidden overflow-y-auto scroll-smooth hover:scroll-auto custom-scrollbar'>
@@ -116,6 +138,7 @@ const Apply = () => {
                                                 setName(e.target.value);
                                             }} 
                                             placeholder='Enter your username' 
+                                            required
                                         />
                                     </div>
 
@@ -128,7 +151,36 @@ const Apply = () => {
                                             value={email}
                                             onChange={(e) => {
                                                 setEmail(e.target.value);
-                                            }}  
+                                            }} 
+                                            required 
+                                        />
+                                    </div>
+
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
+                                        <span className='text-md text-white font-regular my-2'>Enter Your Phone Number</span>
+                                        <input
+                                            className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                            type="text"
+                                            value={phoneNo}
+                                            onChange={(e) => {
+                                                setPhoneNo(e.target.value);
+                                            }} 
+                                            placeholder='Enter your phone no here'
+                                            required 
+                                        />
+                                    </div>
+                                    
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
+                                        <span className='text-md text-white font-regular my-2'>Enter Your Address</span>
+                                        <input
+                                            className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                            type="text"
+                                            value={address}
+                                            onChange={(e) => {
+                                                setAddress(e.target.value);
+                                            }} 
+                                            placeholder='Enter your address here'
+                                            required 
                                         />
                                     </div>
 
@@ -141,6 +193,7 @@ const Apply = () => {
                                             onChange={(e) => {
                                                 setWalletAddress(e.target.value);
                                             }}  
+                                            required
                                         />
                                     </div>
                                         
@@ -155,6 +208,7 @@ const Apply = () => {
                                                 setCompanyName(e.target.value);
                                             }}  
                                             placeholder='Enter your company name here'
+                                            required
                                         />
                                     </div>
 
@@ -181,10 +235,11 @@ const Apply = () => {
                                                 setQuantity(e.target.value);
                                             }}  
                                             placeholder='Enter Quantity of NFT&apos;s you wish to claim'
+                                            required
                                         />
                                     </div>
 
-                                    <div className="w-[80%] mx-auto flex justify-center items-center">
+                                    <div className="w-[90%] mx-auto flex justify-center items-center">
                                         <button type='submit' className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
                                             Submit
                                         </button>

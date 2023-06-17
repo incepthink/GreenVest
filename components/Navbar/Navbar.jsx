@@ -124,8 +124,8 @@ const Navbar = () => {
                     href="/"
                 >
                     <Image
-                        width={75}
-                        height={60}
+                        width={70}
+                        height={55}
                         src="/images/Logo.png"
                         alt="website logo"
                         style={{ objectFit: "contain" }}

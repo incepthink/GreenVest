@@ -326,7 +326,7 @@ export const addWallet = async (dispatch, state) => {
 
 export const magicLogin = async (state, dispatch, did, userInfo) => {
     console.log('magic loggin in', did, userInfo);
-    const notifyId = notifyPromise('Hashcase Wallet Logging in...', 'info');
+    const notifyId = notifyPromise(' Wallet Logging in...', 'info');
     try {
         const userBackend = await axios.post(`${process.env.API}/user/magicLogin`, {
             didToken: did,
@@ -365,7 +365,7 @@ export const magicLogin = async (state, dispatch, did, userInfo) => {
 }
 
 export const connectUDaccount = async (dispatch,userData) => {
-    const notifyId = notifyPromise('Hashcase Wallet Logging in...', 'info');
+    const notifyId = notifyPromise('Wallet Logging in...', 'info');
     console.log(userData);
     try {
         const response = await axios.post(`${process.env.API}/user/udLogin`, {

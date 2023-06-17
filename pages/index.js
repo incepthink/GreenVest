@@ -174,7 +174,7 @@ const Marketplace = () => {
                     )}
                 </div>
             </Modal>
-            <div className="absolute w-full h-screen bg-home-background bg-center  flex flex-row items-stretch bg-cover relative overflow-hidden ">
+            <div className="absolute w-full h-screen md:bg-home-background bg-home-background-2 bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
                 
                 <Head>
                     <title>Tokere&apos;s NFT</title>
@@ -205,7 +205,7 @@ const Marketplace = () => {
 
 
                 {/* nft page content */}
-                <div className=' md:min-w-[500px] md:mx-4 md:my-5 m-0 md:w-[35%] w-[100vw] flex bg-[#04A6E7] bg-gradient-to-b from-[#22d3ee] to-[#0891b2] rounded-md md:rounded-md items-center  overflow-hidden '>
+                <div className=' md:min-w-[500px] md:mx-4 md:my-5 m-0 md:w-[35%] w-[100vw] flex md:bg-[#04A6E7]  rounded-md md:rounded-md items-center  overflow-hidden '>
                     
                     {/* nft page content with scroll */}
                     <div className='w-full p-8 flex flex-col h-full overflow-x-hidden overflow-y-auto scroll-smooth hover:scroll-auto custom-scrollbar'>

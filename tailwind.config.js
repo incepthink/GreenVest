@@ -54,6 +54,7 @@ module.exports = {
       },
       backgroundImage: {
         "home-background": 'url("/images/bg.png")',
+        "home-background-2": 'url("/images/bg2.png")',
       }
     },
   },
