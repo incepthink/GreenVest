@@ -4,13 +4,13 @@ import React from 'react'
 
 const Visions = () => {
   return (
-    <div className='max-w-screen flex md:flex-row flex-col justify-between p-12'>
+    <div className='max-w-screen flex md:flex-row flex-col justify-between p-12 border-b-2 border-gray-300'>
         <div className="bg-white rounded-lg md:w-[30%] w-[100%] md:p-12 md:my-4 md:pb-4 cursor-pointer hover:scale-105 hover:duration-500">
             <div className='md:hidden flex w-100 justify-between items-center'>
                 <h2 className="text-2xl font-bold my-2">Our Vision</h2>
             </div>
             <h2 className="text-2xl font-bold my-2 hidden md:block">Our Vision</h2>
-            <p className="mb-4 text-gray-500 text-md">Our platform provides verified, transparent and immutable RECs for a clear trail and transfer of ownership. Enterprises and Brokers will find tokere a highly efficient platform to manage their REC transactions easier, faster and sustainable.</p>
+            <p className="mb-4 text-gray-500 text-md">Our platform provides verified, transparent and immutable RECs for a clear trail and transfer of ownership. Enterprises and Brokers will find tok-e-re a highly efficient platform to manage their REC transactions easier, faster and sustainable.</p>
         </div>
         <div className="bg-white rounded-tr-full rounded-tl-full md:w-[22%] w-[90%] shadow-md font-poppins my-4 pb-4 transform md:translate-x-0 -translate-x-4 cursor-pointer hover:scale-105 hover:duration-500">
             <Image src="/images/services/vision1.png" alt="vision 1" width={280} height={190} style={{"objectFit":"contain"}} />

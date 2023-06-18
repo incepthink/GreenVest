@@ -5,13 +5,21 @@ import WagmiProvider from "@/utils/WagmiProvider";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import 'react-toastify/dist/ReactToastify.css';
 
+import localFont from '@next/font/local'
+
+const surt = localFont({
+  src: '../assets/Ayuthaya.ttf',
+  variable: '--ayuthaya',
+})
 export default function App({ Component, pageProps }) {
     return (
         <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
             <StoreProvider>
                 <WagmiProvider>
                     <Layout>
-                        <Component {...pageProps} />
+                        <main className={surt.variable}>
+                            <Component {...pageProps} />
+                        </main>
                     </Layout>
                 </WagmiProvider>
             </StoreProvider>

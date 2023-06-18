@@ -7,21 +7,18 @@ const Footer = () => {
   return (
     <div className='max-w-screen    flex text-white bg-[#04A6E7]  flex-col font-poppins'>
         <div className='hidden md:flex flex-row justify-between items-center'>
-            <Link className="flex items-center bg-[#00000033] px-12 py-4 text-xl font-semibold " href="/">
-                <Image width={75} height={60} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}}  />
-                <span className="text-white">Tokere&apos;s</span>
+            <Link className="flex items-center  px-12 py-2 text-xl font-semibold " href="/">
+                <Image width={55} height={55} src = '/images/Logo1.png' alt='website logo' style={{"objectFit":"contain"}}  />
+                <span className="text-white font-ayuthaya">Tok-e-re</span>
             </Link>
-            <h1 className='hidden md:block text-lg font-base px-24'>Pages</h1>
-            <h1 className='hidden md:block text-lg font-base px-24'>Utilities</h1>
-            <h1 className='hidden md:block text-lg font-base px-24'>Subscribe</h1>
         </div>
-        <Link className="md:hidden flex justify-center items-center bg-[#00000033] px-12 py-8 text-2xl font-semibold " href="/">
-            <Image width={75} height={60} src = '/images/Logo.png' alt='website logo' style={{"objectFit":"contain"}}  />
-            <span className="text-white">Tokere&apos;s</span>
+        <Link className="md:hidden flex justify-center items-center bg-[#00000033] px-12 py-6 text-2xl font-semibold " href="/">
+            <Image width={75} height={60} src = '/images/Logo1.png' alt='website logo' style={{"objectFit":"contain"}}  />
+            <span className="text-white">tok-e-re</span>
         </Link>
-        <div className='grid md:grid-cols-3  p-8 font-poppins'>
-            <div className='flex flex-col p-4'>
-                <div className='flex flex-row my-4'>
+        <div className='grid md:grid-cols-3  p-6 font-poppins'>
+            <div className='flex flex-col px-4'>
+                <div className='flex flex-row my-2'>
                     <div className='rounded-full p-3 bg-[#111C55] items-center'><EmailOutlined className='text-green-500' /></div>
                     
                     <div className='flex font-semibold flex-col mx-2'>
@@ -29,7 +26,7 @@ const Footer = () => {
                         <p>contact@logistics.com</p>
                     </div>
                 </div>
-                <div className='flex flex-row my-4 font-semibold'>
+                <div className='flex flex-row my-2 font-semibold'>
                 <div className='rounded-full p-3 bg-[#111C55] items-center'><LocalPhoneOutlined className='text-green-500' /></div>
                     <div className='flex flex-col mx-2'>
                         <p>Call Us</p>
@@ -37,9 +34,15 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col px-8 text-white'>
+            <div className='flex flex-col text-white'>
+                <div className='grid grid-cols-1'>
+                    <Link href='/' className='mx-8 my-3 font-bold text-xl' >Claim NFT</Link>
+                </div>
                 <div className='grid grid-cols-2'>
-                    <Link href='/' className='mx-8 my-4 font-bold text-xl' >Claim NFT</Link>
+                    <Link href='/' className='mx-8 my-3 font-regular text-xl' >Privacy & Policy</Link>
+                </div>
+                <div className='grid grid-cols-2'>
+                    <Link href='/' className='mx-8 my-3 font-regular text-xl' >Disclaimer</Link>
                 </div>
             </div>
             <div className='flex flex-col px-8 text-white'>

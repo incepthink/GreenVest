@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 
 const defaultTheme = require("tailwindcss/defaultTheme")
@@ -17,7 +18,8 @@ module.exports = {
       'oswald':["Oswald", "sans-serif"],
       'nunito':["Nunito Sans", "sans-serif"],
       'bebas':["Bebas Neue",'cursive'],
-      'poppins':["Poppins", "sans-serif"]
+      'poppins':["Poppins", "sans-serif"],
+      'sans': ['var(--ayuthaya)', ...fontFamily.sans],
     },
     backgroundImage: {
       "home-background-1": 'url("/images/illustration.png")',

@@ -205,10 +205,10 @@ const Marketplace = () => {
 
 
                 {/* nft page content */}
-                <div className=' md:min-w-[500px] md:mx-4 md:my-5 m-0 md:w-[35%] w-[100vw] flex md:bg-[#04A6E7]  rounded-md md:rounded-md items-center  overflow-hidden '>
+                <div className=' md:min-w-[500px] md:mx-4 md:my-3 m-0 md:w-[35%] w-[100vw] flex md:bg-[#04A6E7]  rounded-md md:rounded-md items-center  overflow-hidden '>
                     
                     {/* nft page content with scroll */}
-                    <div className='w-full p-8 flex flex-col h-full overflow-x-hidden overflow-y-auto scroll-smooth hover:scroll-auto custom-scrollbar'>
+                    <div className='w-full p-6 flex flex-col h-full overflow-x-hidden overflow-y-auto scroll-smooth hover:scroll-auto custom-scrollbar'>
 
                         {/* nft page content top */}
                         <div>
@@ -216,35 +216,35 @@ const Marketplace = () => {
                             
                             
                             {/* information content */}
-                            <div className='w-full flex flex-col font-poppins my-4'>
+                            <div className='w-full flex flex-col font-poppins'>
                                 {/* NFT NAME */}
-                                <span className='text-xl text-white font-regular my-2'>Name of NFT</span>
+                                <span className='text-xl text-white font-semibold '>Name of NFT</span>
                                 <span
                                     className='bg-[#68CAF1] p-3 text-2xl text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
                                 >
-                                    Tokere CC NFT
+                                    Tokere Tree
                                 </span>
                             </div>
 
 
-                            <div className='w-full flex flex-col font-poppins my-2'>
+                            <div className='w-full flex flex-col font-poppins '>
                                 {/* NFT NAME */}
-                                <span className='text-lg text-white font-regular my-2'>Description</span>
+                                <span className='text-xl text-white font-semibold my-2'>Description</span>
                                 <span
                                     className='bg-[#68CAF1] p-4 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
-                                >
-                                    This is a FREE CLAIM NFT for the early supporters of Tokere as we make the world greener. Each NFT represents 1kg of CO2 that has been sequestered from the environment. Together, the 1,000 NFTs make up a single carbon credit.<Link className='underline text-white font-bold' href='https://drive.google.com/file/d/1RS0usksdEJSgWYJnTP3Ax8TwuyinB5wy/view'>Certificate</Link> 
+                                > 
+                                    1 Tree NFT is equivalent to 1 kWh, But 1 REC is equivalent to 1000 tree that is 1000 kWh.
                                 </span>
                             </div>    
-                            <div className="w-full flex flex-col my-4">
+                            <div className="w-full flex flex-col my-2 ">
                                 <img src='/images/sample_nft.png' alt="sample nft" className="md:w-[50%] w-[85%]" style={{'margin':'0 auto', borderRadius:'0.75rem'}} />
                             </div>
 
-                            <div className='w-full flex my-2 p-1 mx-auto text-center justify-center'>
+                            <div className='w-full flex  p-1 mx-auto text-center justify-center'>
                                 {
                                     
                                     nftBalance == -1 ? <></> : 
-                                        nftBalance > 0 && <span className="mt-2 text-white text-center font-bold">You have {nftBalance} Carbon Credit NFTs claimed in your <Link href='/myWallet' className="underline">Wallet</Link></span> 
+                                        nftBalance > 0 && <span className=" text-white text-center font-bold">You have {nftBalance} Carbon Credit NFTs claimed in your <Link href='/myWallet' className="underline">Wallet</Link></span> 
                                 }
 
                             </div>
@@ -252,7 +252,7 @@ const Marketplace = () => {
                                 nftBalance < 0 && 
                                 <div className="w-full flex justify-center items-center">
                                     <button onClick={mintNFTToWallet} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
-                                        Claim To Wallet
+                                        Claim One Free NFT
                                     </button>
                                 </div>
                             }

@@ -14,7 +14,7 @@ const services = () => {
             <div className='w-[50%] flex flex-col md:py-32 md:px-20 font-poppins'>
                 <h1 className='text-black font-bold text-6xl uppercase '>Our Services</h1>
                 <p className='font-regular text-[#2E2E2E] my-14'>
-                    &quot;At Tokere&apos;s, we understand the importance of protecting and preserving our planet for future generations, 
+                    &quot;At Tok-e-re&apos;s, we understand the importance of protecting and preserving our planet for future generations, 
                     which is why we offer a comprehensive range of environmental services designed to help businesses 
                     and individuals minimize their carbon footprint and promote sustainable practices.&quot;
                 </p>
@@ -46,7 +46,7 @@ const services = () => {
                     <h2 className='text-xl font-semibold my-4'>Developers</h2>
                     <p className='text-base text-[#6B6B6B] my-2'>Irrespective of the scale of the asset, every building has an immense opportunity to upgrade its value for higher returns. You can start by offsetting your power consumption with our curated and tokenised RECs.
                     <br/>
-                    Tokere allows you to view, track, consume and retire your RECs in real time. Enterprises can export reports for REC purchases, consumption and retirement to prove their initiatives towards Net 0
+                    Tok-e-re allows you to view, track, consume and retire your RECs in real time. Enterprises can export reports for REC purchases, consumption and retirement to prove their initiatives towards Net 0
 
                     </p>
                     <button className='px-6 py-2 text-white my-2 rounded-lg bg-[#04A6E7] w-[20%]' onClick={() => router.push('/services/developer')}>Check</button>
