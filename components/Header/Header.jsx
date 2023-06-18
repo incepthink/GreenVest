@@ -8,9 +8,9 @@ const Header = () => {
     const { state, dispatch } = useContext(StoreContext);
 
     return (
-        <div className="max-w-screen md:h-[50%] h-screen bg-[#04a6e71a] md:rounded-bl-[163px] rounded-bl-[80px]">
+        <div className="max-w-screen md:h-[50%] h-[100%] bg-[#04a6e71a] md:rounded-bl-[163px] rounded-bl-[80px]">
             <div className="flex flex-col md:flex-row justify-around items-center">
-                <div className="md:w-[60%] w-[100%] md:px-24 px-8  py-8 flex-col font-bebas uppercase">
+                <div className="md:w-[60%] w-[100%] md:px-24 px-8  md:py-16 flex-col font-bebas uppercase">
                     <h1 className="md:text-7xl text-5xl flex lowercase font-ayuthaya items-center">
                         tok-e-re{" "}
                         <div className="w-100 h-100">
@@ -60,10 +60,10 @@ const Header = () => {
                         alt="Globe"
                         width={500}
                         height={500}
-                        style={{ objectFit: "contain" }}
+                        style={{ objectFit: "contain", margin:'0 auto' }}
                     />
                 </div>
-                <div className="flex items-center font-poppins normal-case md:hidden">
+                <div className="flex items-center font-poppins normal-case mb-4 md:hidden">
                     <Link
                         href="/signin"
                         className="text-white  bg-[#04A6E7] rounded-[1.5rem] px-4 py-2 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 font-poppins"
