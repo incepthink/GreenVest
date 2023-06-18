@@ -13,7 +13,7 @@ function MobileNav({open, setOpen ,user, anchorEl, openDropdown, handleClose, ha
         <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
                 <Link
-                    className="flex items-center text-2xl font-semibold mr-2"
+                    className="flex items-center md:text-2xl text-xl font-semibold "
                     href="/"
                 >
                     <Image
@@ -42,8 +42,8 @@ function MobileNav({open, setOpen ,user, anchorEl, openDropdown, handleClose, ha
                 >
                     About Us
                 </Link>
-                <Link 
-                    href='/signin'
+                <div 
+                    
                 >
                     {
                         user ?
@@ -57,10 +57,10 @@ function MobileNav({open, setOpen ,user, anchorEl, openDropdown, handleClose, ha
                         >
                             My Account
                         </button>
-                        :<button onClick={()=>{router.push('/signin'); setTimeout(()=>{setOpen(!open)},100) }} className="my-4 bg-[#04A6E7] text-white rounded-3xl px-4 py-2">Sign In</button>
+                        :<Link onClick={()=>{setTimeout(()=>{setOpen(!open)},100) }} href='/signin'className="my-4 bg-[#04A6E7] text-white rounded-3xl px-4 py-2">Sign In</Link>
                     }
                     
-                </Link>
+                </div>
             </div>  
         </div>
     )
@@ -118,19 +118,19 @@ const Navbar = () => {
                 anchorEl={anchorEl} 
                 dispatch={dispatch}
             />
-            <div className="w-3/12 flex items-center">
+            <div className="md:w-3/12 w-1/2 flex items-center">
             <Link
-                    className="flex items-center text-2xl font-semibold mr-2"
+                    className="flex items-center text-2xl font-semibold "
                     href="/"
                 >
                     <Image
-                        width={55}
-                        height={55}
+                        width={50}
+                        height={50}
                         src="/images/Logo1.png"
                         alt="website logo"
                         style={{ objectFit: "contain" }}
                     />
-                    <span className="text-[#106ba3] font-ayuthaya ml-1">{" "}Tok-e-re</span>
+                    <span className="text-[#106ba3] font-ayuthaya ">{" "}Tok-e-re</span>
                 </Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">

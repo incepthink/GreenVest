@@ -7,11 +7,15 @@ import Navbar from "@/components/Navbar/Navbar";
 import RecentProjects from "@/components/RecentProjects/RecentProjects";
 import Services from "@/components/Services/Services";
 import Visions from "@/components/Visions/Visions";
+import Head from "next/head";
 import Image from "next/image";
 
 export default function Home() {
     return (
       <div>
+          <Head>
+            <title>About Us</title>
+          </Head>
           <Navbar />
           <Header />
           <Visions />

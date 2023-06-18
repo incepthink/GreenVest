@@ -236,7 +236,7 @@ const Marketplace = () => {
                                     1 Tree NFT is equivalent to 1 kWh, But 1 REC is equivalent to 1000 tree that is 1000 kWh.
                                 </span>
                             </div>    
-                            <div className="w-full flex flex-col my-2 ">
+                            <div className="w-full flex flex-col my-4 ">
                                 <img src='/images/sample_nft.png' alt="sample nft" className="md:w-[50%] w-[85%]" style={{'margin':'0 auto', borderRadius:'0.75rem'}} />
                             </div>
 
@@ -251,14 +251,14 @@ const Marketplace = () => {
                             {
                                 nftBalance < 0 && 
                                 <div className="w-full flex justify-center items-center">
-                                    <button onClick={mintNFTToWallet} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
+                                    <button onClick={mintNFTToWallet} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-2 mb-3 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
                                         Claim One Free NFT
                                     </button>
                                 </div>
                             }
 
                                 <div className="w-full flex justify-center items-center">
-                                    <button onClick={() => router.push('/apply')} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
+                                    <button onClick={() => router.push('/apply')} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3 mb-3 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
                                         Place Order for large quantity
                                     </button>
                                 </div>

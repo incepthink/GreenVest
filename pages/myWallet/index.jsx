@@ -10,10 +10,45 @@ const MyWallet = () => {
     const { state, dispatch } = useContext(StoreContext);
     const [nftList, setNftList] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [accountAddress, setAccountAddress] = useState("");
+    const [nftBalance, setNftBalance] = useState(-1);
 
+    const checkNFTBalanceForUser = async () => {
+        let wallet_address;
+        
+        if(state?.user?.magic_wallet){
+            wallet_address = state.user.magic_wallet;
+            setAccountAddress(state.user.magic_wallet);
+        }else if(state?.user?.wallet_address){
+            wallet_address = state.user.wallet_address;
+            setAccountAddress(state.user.wallet_address);
+        }else{
+            return;
+        }
+
+        try{
+            const config = {
+                headers: {
+                  "Content-Type": "application/json",
+                },
+            };
+        
+            axios.defaults.headers.common = {
+                "x-api-key": token,
+            };
+            const res = await axios.get(`https://api.hashcase.co/dev/checkBalanceOfNFTInWallet?wallet_address=${wallet_address}&token_id=6&collection_id=2`, config);
+            console.log(res.data);
+            setNftBalance(res.data.balance);
+        }catch(e){
+            console.log(e);
+            setNftBalance(0);
+        }
+        
+    }
     useEffect(() => {
         fetchNFTs();
-    }, []);
+        checkNFTBalanceForUser();
+    }, [state.user]);
 
     const fetchNFTs = async () => {
         let wallet_address;
@@ -94,6 +129,9 @@ const MyWallet = () => {
                                             </a>
                                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-100">
                                                 {nftInfo.description}
+                                            </p>
+                                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-100">
+                                                You have {nftBalance} Carbon Credit NFTs claimed!!
                                             </p>
                                         </div>
                                     </div>
