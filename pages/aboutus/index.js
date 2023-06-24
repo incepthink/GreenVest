@@ -21,7 +21,7 @@ export default function Home() {
           <Visions />
           <Mission />
           <Services />
-          <Ecosystem />
+          {/* <Ecosystem /> */}
           {/* <h1 className="text-3xl font-bold text-center underline">
               Hello World!!
 

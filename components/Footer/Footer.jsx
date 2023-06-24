@@ -39,10 +39,13 @@ const Footer = () => {
                     <Link href='/' className='mx-8 my-3 font-bold text-xl' >Claim NFT</Link>
                 </div>
                 <div className='grid grid-cols-2'>
-                    <Link href='/' className='mx-8 my-3 font-regular text-xl' >Privacy & Policy</Link>
+                    <Link href='/privacypolicy' className='mx-8 my-3 font-regular text-xl' >Privacy & Policy</Link>
                 </div>
                 <div className='grid grid-cols-2'>
-                    <Link href='/' className='mx-8 my-3 font-regular text-xl' >Disclaimer</Link>
+                    <Link href='/disclaimer' className='mx-8 my-3 font-regular text-xl' >Disclaimer</Link>
+                </div>
+                <div className='grid grid-cols-2'>
+                    <Link href='/faq' className='mx-8 my-3 font-regular text-xl' >FAQs</Link>
                 </div>
             </div>
             <div className='flex flex-col px-8 text-white'>
