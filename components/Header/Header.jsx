@@ -54,7 +54,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="w-[100%] md:w-[40%]  justify-center items-center">
+                <div className="w-[90%] md:my-0 my-4 md:w-[40%]  justify-center items-center">
                     <Image
                         src="/images/HD.png"
                         alt="Globe"
