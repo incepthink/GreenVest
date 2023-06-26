@@ -22,7 +22,7 @@ module.exports = {
       'sans': ['var(--ayuthaya)', ...fontFamily.sans],
     },
     backgroundImage: {
-      "home-background-1": 'url("/images/illustration.png")',
+      "home-background-1": 'url("/images/illustration2.png")',
       "service-background": 'url("/images/OurServiceBG.png")',
       "img-background":'url("/images/earth-bg.png")'
     },

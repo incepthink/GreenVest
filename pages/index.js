@@ -233,7 +233,7 @@ const Marketplace = () => {
                                 <span
                                     className='bg-[#68CAF1] p-4 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
                                 > 
-                                    1 Tree NFT is equivalent to 1 kWh, But 1 REC is equivalent to 1000 tree that is 1000 kWh.
+                                    1 Tree NFT = 1kWh,<br className="md:hidden" /> 1 REC = 1000kWh,<br className="md:hidden" /> therefore 1000 tree NFT = 1 REC
                                 </span>
                             </div>    
                             <div className="w-full flex flex-col my-4 ">
