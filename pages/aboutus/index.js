@@ -31,7 +31,7 @@ export default function Home() {
             <Image src="/images/flowChart3.png" alt="vision 1" className="shadow-md shadow-[#04A6E7]" width={600} height={600} style={{"objectFit":"contain", }} />
             <Image src="/images/Website.jpg" alt="vision 1" className="shadow-md shadow-[#04A6E7]" width={600} height={600} style={{"objectFit":"contain", }} />
           </div>
-          <div className="max-w-screen md:h-[68vh] h-[50vh] bg-home-background-1 bg-top bg-cover" />
+          <div className="max-w-screen md:h-[60vh] h-[50vh] bg-home-background-1 bg-cover " />
           <MeetOurTeam />
           <Footer />
       </div>

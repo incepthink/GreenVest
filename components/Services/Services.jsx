@@ -27,7 +27,7 @@ const Services = () => {
                     <h2 className='text-xl font-semibold'>
                         Enterprise 
                     </h2>
-                    <p className='font-light my-2 px-1'>
+                    <p className='font-light text-md my-2 px-1'>
                     All enterprises be it large, medium and small, committed to Net 0 for a sustainable business, can start with offsetting their power consumptions with our curated and tokenised RECs. 
                     </p>
                 </div>
@@ -43,7 +43,7 @@ const Services = () => {
                     <h2 className='text-xl font-semibold'>
                         Developers 
                     </h2>
-                    <p className='font-light my-2 px-4'>
+                    <p className='font-light text-md my-2 px-2'>
                     Irrespective of the scale of the asset, every building has an immense opportunity to upgrade its value for higher returns. You can start by offsetting your power consumption with our curated and tokenised RECs. 
                     </p>
                 </div>
@@ -60,7 +60,7 @@ const Services = () => {
                     <h2 className='text-xl font-semibold'>
                         Individuals 
                     </h2>
-                    <p className='font-light my-2 px-1'>
+                    <p className='font-light text-md my-2 px-1'>
                     Discerning, globally conscious and trendsetting individuals also how have an opportunity to contribute to global Net 0. Connect with us to offset your power consumption with our curated and tokenised RECs. 
                     </p>
                 </div>
