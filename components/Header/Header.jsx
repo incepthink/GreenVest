@@ -10,25 +10,15 @@ const Header = () => {
     return (
         <div className="max-w-screen md:h-[50%] h-[100%] bg-[#04a6e71a] md:rounded-bl-[163px] rounded-bl-[80px]">
             <div className="flex flex-col md:flex-row justify-around items-center">
-                <div className="md:w-[60%] w-[100%] md:px-24 px-8  md:py-16 flex-col font-bebas uppercase">
-                    <h1 className="md:text-7xl text-5xl flex lowercase font-ayuthaya items-center">
-                        tok-e-re{" "}
-                        <div className="w-100 h-100">
-                            <Image
-                                src="/images/Header/Co2.png"
-                                alt="CO2"
-                                width={75}
-                                height={75}
-                                style={{ objectFit: "contain" }}
-                            />
-                        </div>
+                <div className="md:w-[60%] w-[100%] my-4 md:px-24 px-8 font-bold md:py-16 flex-col font-poppins ">
+                    <h1 className="md:text-7xl text-5xl flex text-[#04A6E7] items-center">
+                        tok-e-re
                     </h1>
-                    <h1 className="md:text-6xl text-[40px] items-center">
-                    Simplifying your <span className="text-[#04A6E7]">Net 0</span> journey
-                        
+                    <h1 className="md:text-4xl text-2xl  items-center">
+                        switch to <span className="text-green-500">green energy</span> - made affordable, simple & quick 
                     </h1>
-                    <h1 className="text-base md:text-xl md:my-4 items-center normal-case text-gray-400 font-poppins">
-                    Renewable Energy Certificate & Carbon Credit NFTs powered by web3 tech a fraction or a large bundle, we curate right-size solutions for Enterprises, Real Estate & Households accelerating transition to 100% Green Power & compliance to Scope 2 emissions.
+                    <h1 className="text-base md:text-xl md:my-4 items-center normal-case text-gray-500 font-poppins">
+                    Fractional & Tokenised Renewable Energy Certificates (RECs) Transactions Platform
                     </h1>
                     <div className="flex my-12 items-center font-poppins normal-case hidden md:flex">
                         <Link

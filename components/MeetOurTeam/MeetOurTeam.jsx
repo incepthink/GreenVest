@@ -5,10 +5,29 @@ import Link from 'next/link'
 const teamMembers = [
   {
     name: 'Prafulla Agarwal',
-    role: 'Founding Team',
+    // role: 'Founding Team',
     image: '/images/prafulla.png',
   },
-  
+  {
+    name: 'Taaha Nizam',
+    // role: 'Founding Team',
+    image: '/images/Taaha.png',
+  },
+  {
+    name: 'VKS Sastry',
+    // role: 'Founding Team',
+    image: '/images/vksastry.png',
+  },
+  {
+    name: 'Pooja Raikwar',
+    // role: 'Founding Team',
+    image: '/images/pooja.png',
+  },
+  {
+    name: 'Dr Anjan Ray',
+    // role: 'Founding Team',
+    image: '/images/Anjan.png',
+  },
 ]
 
 const MeetOurTeam = () => {
@@ -37,15 +56,13 @@ const MeetOurTeam = () => {
                                         alt={member.name}
                                     />
                                 </div>
-                                <div className='bg-[#04A6E7] px-8 py-4 text-white'>
-                                    <h3 className="text-xl font-bold">
+                                <div className='bg-[#04A6E7] px-4 py-4 text-white'>
+                                    <h3 className="text-lg font-bold">
                                         {member.name}
                                     </h3>
                                     <div className='flex w-full justify-between items-center'>
-                                        <p className="mt-1 text-sm ">{member.role}</p>
+                                        {/* <p className="mt-1 text-sm ">{member.role}</p> */}
                                         <div className='flex text-white'>
-                                            <Instagram className='px-1'/>
-                                            <FacebookOutlined className='px-1'/>
                                             <LinkedIn  className='px-1'/>
                                             <Twitter className='px-1' />
                                         </div>

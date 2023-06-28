@@ -174,7 +174,7 @@ const Marketplace = () => {
                     )}
                 </div>
             </Modal>
-            <div className="absolute w-full h-screen md:bg-home-background bg-home-background-2 bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
+            <div className="absolute font-poppins w-full h-screen md:bg-home-background bg-home-background-2 bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
                 
                 <Head>
                     <title>Tokere&apos;s NFT</title>
@@ -233,7 +233,7 @@ const Marketplace = () => {
                                 <span
                                     className='bg-[#68CAF1] p-4 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
                                 > 
-                                    1 Tree NFT = 1kWh,<br className="md:hidden" /> 1 REC = 1000kWh,<br className="md:hidden" /> therefore 1000 tree NFT = 1 REC
+                                    1 Tree NFT = 1kWh
                                 </span>
                             </div>    
                             <div className="w-full flex flex-col my-4 ">

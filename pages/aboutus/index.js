@@ -19,7 +19,7 @@ export default function Home() {
           <Navbar />
           <Header />
           <Visions />
-          <Mission />
+          {/* <Mission /> */}
           <Services />
           {/* <Ecosystem /> */}
           {/* <h1 className="text-3xl font-bold text-center underline">
@@ -37,7 +37,7 @@ export default function Home() {
             <Image src="/images/Website.jpg" alt="vision 1" className="shadow-md my-4 shadow-[#04A6E7]" width={850} height={850}  />
             
           </div>
-          <div className="my-4 hidden md:flex max-w-screen md:h-[60vh] h-[50vh] bg-home-background-1 bg-cover bg-center" />
+          <div className="my-4 hidden md:flex max-w-screen  h-[52vh] bg-home-background-1 bg-cover bg-center" />
           <MeetOurTeam />
           <Footer />
       </div>

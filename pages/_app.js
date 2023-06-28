@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import localFont from '@next/font/local'
 
 const surt = localFont({
-  src: '../assets/Ayuthaya.ttf',
+  src: '../public/fonts/Ayuthaya.ttf',
   variable: '--ayuthaya',
 })
 export default function App({ Component, pageProps }) {

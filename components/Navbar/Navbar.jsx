@@ -19,11 +19,11 @@ function MobileNav({open, setOpen ,user, anchorEl, openDropdown, handleClose, ha
                     <Image
                         width={55}
                         height={55}
-                        src="/images/Logo1.png"
+                        src="/images/Logo2.png"
                         alt="website logo"
                         style={{ objectFit: "contain" }}
                     />
-                    <span className="text-[#00337C] font-ayuthaya ml-1">{" "}tok-e-re</span>
+                    <span className="text-[#04A6E7] font-ayuthaya ml-1">{" "}tok-e-re</span>
                 </Link>
             </div>
             <div className="flex flex-col ml-4 text-[#00337C]  text-2xl font-nunito">
@@ -126,11 +126,11 @@ const Navbar = () => {
                     <Image
                         width={50}
                         height={50}
-                        src="/images/Logo1.png"
+                        src="/images/Logo2.png"
                         alt="website logo"
                         style={{ objectFit: "contain" }}
                     />
-                    <span className="text-[#106ba3] font-ayuthaya ">{" "}Tok-e-re</span>
+                    <span className="text-[#04A6E7] ayuthaya ">{" "}tok-e-re</span>
                 </Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">
