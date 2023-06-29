@@ -259,7 +259,7 @@ const Marketplace = () => {
 
                                 <div className="w-full flex justify-center items-center">
                                     <button onClick={() => router.push('/apply')} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3 mb-3 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
-                                        Place Order for large quantity
+                                        Place Order 
                                     </button>
                                 </div>
 

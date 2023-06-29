@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: 'Taaha Nizam',
     // role: 'Founding Team',
-    image: '/images/Taaha.png',
+    image: '/images/Taaha1.png',
   },
   {
     name: 'VKS Sastry',
