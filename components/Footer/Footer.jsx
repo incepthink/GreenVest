@@ -8,12 +8,12 @@ const Footer = () => {
     <div className='max-w-screen    flex text-white bg-[#04A6E7]  flex-col font-poppins'>
         <div className='hidden md:flex flex-row justify-between items-center'>
             <Link className="flex items-center  px-12 py-2 text-xl font-semibold " href="/">
-                <Image width={55} height={55} src = '/images/Logo1.png' alt='website logo' style={{"objectFit":"contain"}}  />
-                <span className="text-white font-ayuthaya">Tok-e-re</span>
+                <Image width={55} height={55} src = '/images/Logo2.png' alt='website logo' style={{"objectFit":"contain"}}  />
+                <span className="text-white font-ayuthaya">tok-e-re</span>
             </Link>
         </div>
         <Link className="md:hidden flex justify-center items-center bg-[#00000033] px-12 py-6 text-2xl font-semibold " href="/">
-            <Image width={75} height={60} src = '/images/Logo1.png' alt='website logo' style={{"objectFit":"contain"}}  />
+            <Image width={75} height={60} src = '/images/Logo2.png' alt='website logo' style={{"objectFit":"contain"}}  />
             <span className="text-white">tok-e-re</span>
         </Link>
         <div className='grid md:grid-cols-3  p-6 font-poppins'>
