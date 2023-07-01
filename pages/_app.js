@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
             <StoreProvider>
                 <WagmiProvider>
                     <Layout>
-                        <main className={surt.variable}>
+                        <main className={surt.variable + " w-full"}>
                             <Component {...pageProps} />
                         </main>
                     </Layout>
