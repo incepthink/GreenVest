@@ -243,13 +243,12 @@ const Marketplace = () => {
                             <div className='w-full flex  p-1 mx-auto text-center justify-center'>
                                 {
                                     
-                                    nftBalance == -1 ? <></> : 
-                                        nftBalance > 0 && <span className=" text-white text-center font-bold">You have {nftBalance} Carbon Credit NFTs claimed in your <Link href='/myWallet' className="underline">Wallet</Link></span> 
+                                    nftBalance > 0 && <span className=" text-white text-center font-bold">You have {nftBalance} Carbon Credit NFTs claimed in your <Link href='/myWallet' className="underline">Wallet</Link></span> 
                                 }
 
                             </div>
                             {
-                                nftBalance < 0 && 
+                                nftBalance <= 0 && 
                                 <div className="w-full flex justify-center items-center">
                                     <button onClick={mintNFTToWallet} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-2 mb-3 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
                                         Claim One Free NFT
