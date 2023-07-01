@@ -45,14 +45,17 @@ const Header = () => {
                 </div>
 
                 <div className="w-[90%] md:my-0 my-4 md:w-[40%]  justify-center items-center">
+                
                     <Image
-                        src="/images/HD.png"
+                        src="/images/Logo2.png"
                         alt="Globe"
-                        width={500}
-                        height={500}
+                        width={400}
+                        height={400}
                         style={{ objectFit: "contain", margin:'0 auto' }}
                     />
+                
                 </div>
+
                 <div className="flex items-center font-poppins normal-case mb-4 md:hidden">
                     <Link
                         href="/signin"

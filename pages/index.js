@@ -174,7 +174,7 @@ const Marketplace = () => {
                     )}
                 </div>
             </Modal>
-            <div className="absolute font-poppins w-full h-screen md:bg-home-background bg-home-background-2 bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
+            <div className="absolute font-poppins w-full h-screen md:bg-home-background bg-[#3addf6] bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
                 
                 <Head>
                     <title>Tokere&apos;s NFT</title>

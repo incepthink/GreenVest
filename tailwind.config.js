@@ -24,7 +24,8 @@ module.exports = {
     backgroundImage: {
       "home-background-1": 'url("/images/illustration2.png")',
       "service-background": 'url("/images/OurServiceBG.png")',
-      "img-background":'url("/images/earth-bg.png")'
+      "img-background":'url("/images/earth-bg.png")',
+      "home-background-3": 'url("/images/Logo2.png")'
     },
     // colors:{
     //   'light-green':'#a5f3fc',
