@@ -15,12 +15,12 @@ const index = () => {
         </div>
         <div className='flex flex-col md:flex-row md:max-w-[90%] w-100 mx-auto justify-evenly items-center my-12 font-poppins'>
                 
-                <div className='flex flex-col my-4'>
+                <div className='flex flex-col my-4 cursor-pointer'>
                     <img src="/images/partner4.png" alt="partner 1" style={{width:'75%', objectFit:'contain', margin:'0 auto'}} />
                     <p className='font-semibold my-2 text-center'>A market leading &apos;Climate Change Specialist&apos;.</p>
                 </div>
 
-                <div className='flex flex-col my-4'>
+                <div className='flex flex-col my-4 cursor-pointer'>
                     <img src="/images/partner3.png"  alt="partner 1" style={{width:'50%', objectFit:'contain', margin:'0 auto'}} />
                     <p className='font-semibold my-2 text-center'>A global leader in Hospitality Consulting.</p>
                 </div>
