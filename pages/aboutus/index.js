@@ -2,7 +2,7 @@ import Ecosystem from "@/components/Ecosystem/Ecosystem";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import MeetOurTeam from "@/components/MeetOurTeam/MeetOurTeam";
-import Mission from "@/components/Mission/Mission";
+import OurPartners from "@/components/OurPartners/index";
 import Navbar from "@/components/Navbar/Navbar";
 import RecentProjects from "@/components/RecentProjects/RecentProjects";
 import Services from "@/components/Services/Services";
@@ -55,6 +55,7 @@ export default function Home() {
           </div>
           <div className="my-4 hidden md:flex max-w-screen  h-[52vh] bg-home-background-1 bg-cover bg-center" />
           <MeetOurTeam />
+          <OurPartners />
           <Footer />
       </div>
     )

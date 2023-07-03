@@ -13,8 +13,7 @@ const Services = () => {
                 <h2 className="text-4xl font-bold uppercase tracking-wide">services</h2>
             </div>
             <p className='text-lg mt-4 text-gray-500 leading-8 pb-4'>
-                At our company, we pride ourselves on delivering a level of service that consistently exceeds our customers expectations, 
-                ensuring that every interaction is a positive and memorable experience.
+            Relevant across the spectrum whether you are an enterprise, industry or a household, we have fit-to-purpose solutions for every need.
             </p>
         </div>
         <div className='flex flex-col md:flex-row md:max-w-[90%] w-100 mx-auto justify-evenly items-center my-12 font-poppins'>
