@@ -15,18 +15,26 @@ const index = () => {
         </div>
         <div className='flex flex-col md:flex-row md:max-w-[90%] w-100 mx-auto justify-evenly items-center my-12 font-poppins'>
                 
-                <div className='flex flex-col my-4 cursor-pointer'>
-                    <img src="/images/partner4.png" alt="partner 1" style={{width:'75%', objectFit:'contain', margin:'0 auto'}} />
-                    <p className='font-semibold my-2 text-center'>A market leading &apos;Climate Change Specialist&apos;.</p>
-                </div>
+                <a href="https://ebtc.eu/" target="_blank">
+                    <div className='flex flex-col my-4 cursor-pointer hover:scale-105 hover:duration-500'>
+                        <img src="/images/partner4.png" alt="partner 1" width={350} height={350} style={{margin:'0 auto'}} />
+                        <p className='font-semibold my-2 text-center'>A market leading &apos;Climate Change Specialist&apos;.</p>
+                    </div>
+                </a>
 
-                <div className='flex flex-col my-4 cursor-pointer'>
-                    <img src="/images/partner3.png"  alt="partner 1" style={{width:'50%', objectFit:'contain', margin:'0 auto'}} />
-                    <p className='font-semibold my-2 text-center'>A global leader in Hospitality Consulting.</p>
-                </div>
-                    
+                <a href='https://cma-india.in/' target='_blank'>
+                    <div className='flex flex-col my-4 cursor-pointer hover:scale-105 hover:duration-500'>
+                        <img src="/images/partner3.png"  alt="partner 1" width={300} height={300} style={{margin:'0 auto'}} />
+                        <p className='font-semibold my-2 text-center'>A global leader in Hospitality Consulting.</p>
+                    </div>
+                </a>
 
-                
+                <a href='/' target='_blank'>
+                    <div className='flex flex-col my-4 cursor-pointer hover:scale-105 hover:duration-500'>
+                        <img src="/images/envf.png"  alt="partner 1" width={350} height={350} style={{margin:'0 auto'}} />
+                        <p className='font-semibold my-2 text-center'>A global leader in Sustainability Solutions.</p>
+                    </div>
+                </a>
         </div>
     </div>
   )

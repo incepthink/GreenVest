@@ -42,19 +42,13 @@ const Apply = () => {
     const {state,dispatch} = useContext(StoreContext);
 
     useEffect(()=>{
-        console.log("User", state.user);
-        if(!state.user) {
-            router.push('/signin');
-        }
-        else {
-            setEmail(state.user.email)
-            setWalletAddress(state.user.magic_wallet)
-        }
+            setEmail(state?.user?.email || "")
+            setWalletAddress(state?.user?.magic_wallet || "")
     },[state.user,router])
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        if(name === '' || email === '' || phoneNo === '' || address === '' || walletAddress === ''
+        if(name === ''  || phoneNo === '' || address === '' 
         || companyName === '' || quantity === '') {
             toast.error("Please fill all the details")
             return;
@@ -114,7 +108,7 @@ const Apply = () => {
                     
                 </div>
             </Modal>
-            <div className="absolute w-full h-screen md:bg-home-background bg-home-background-2 bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
+            <div className="absolute w-full h-screen md:bg-home-background bg-[#3addf6] bg-center  flex flex-row items-stretch bg-cover   relative overflow-hidden ">
                 <Head>
                     <title>Place Order</title>
                 </Head>

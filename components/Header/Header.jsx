@@ -22,11 +22,11 @@ const Header = () => {
                     </h1>
                     <div className="flex my-12 items-center font-poppins normal-case hidden md:flex">
                         <Link
-                                href="/"
+                                href="/nfts"
                                 className="text-white  bg-[#04A6E7] rounded-[1.5rem] px-4 py-2 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 font-poppins"
                                 style={{ fontSize: "1.25rem" }}
                             >
-                                Claim 1 Free REC NFT
+                                Claim 1  REC NFT
                             </Link>
                         <Link
                             href="/watch-video"

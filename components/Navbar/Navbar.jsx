@@ -29,15 +29,15 @@ function MobileNav({open, setOpen ,user, anchorEl, openDropdown, handleClose, ha
             <div className="flex flex-col ml-4 text-[#00337C]  text-2xl font-nunito">
                 
                 <Link 
-                    className={`my-4 ${router.pathname=='/' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'}`} 
-                    href="/" 
+                    className={`my-4 ${router.pathname=='/nfts' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'}`} 
+                    href="/nfts" 
                     onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
                 >
                     NFTs
                 </Link>
                 <Link 
-                    className={`my-4 ${router.pathname=='/services' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2 '} `} 
-                    href="/aboutus" 
+                    className={`my-4 ${router.pathname=='/' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2 '} `} 
+                    href="/" 
                     onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
                 >
                     About Us
@@ -119,7 +119,7 @@ const Navbar = () => {
                 dispatch={dispatch}
             />
             <div className="md:w-3/12 w-1/2 flex items-center">
-            <Link
+                <Link
                     className="flex items-center text-2xl font-semibold "
                     href="/"
                 >
@@ -146,14 +146,14 @@ const Navbar = () => {
 
                 <div className="hidden md:flex justify-center items-center text-[#00337C] text-lg font-nunito ">
                     <Link 
-                        href="/" 
-                        className={`mx-4 hover:scale-105 duration-150 items-center justify-center ease-in delay-150 ${router.pathname=='/' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
+                        href="/nfts" 
+                        className={`mx-4 hover:scale-105 duration-150 items-center justify-center ease-in delay-150 ${router.pathname=='/nfts' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
                     >
                         NFTs
                     </Link>
                     <Link 
-                        href="/aboutus" 
-                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${(router.pathname=='/aboutus' || router.pathname=='/services/enterprise') && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
+                        href="/" 
+                        className={`mx-4 hover:scale-105 duration-150 ease-in delay-150 ${router.pathname=='/' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
                     >
                         About Us
                     </Link>
