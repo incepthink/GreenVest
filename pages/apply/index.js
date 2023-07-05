@@ -42,13 +42,18 @@ const Apply = () => {
     const {state,dispatch} = useContext(StoreContext);
 
     useEffect(()=>{
-            setEmail(state?.user?.email || "")
-            setWalletAddress(state?.user?.magic_wallet || "")
+        if(state.user) {
+            setEmail(state?.user?.email)
+            setWalletAddress(state?.user?.magic_wallet)
+        }    
+        else {
+            router.push('/signin');
+        }
     },[state.user,router])
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        if(name === ''  || phoneNo === '' || address === '' 
+        if(name === '' || email === '' || walletAddress === ""  || phoneNo === '' || address === '' 
         || companyName === '' || quantity === '') {
             toast.error("Please fill all the details")
             return;
