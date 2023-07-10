@@ -130,9 +130,7 @@ const MyWallet = () => {
                                             <p class="mb-3 font-normal text-gray-700 dark:text-gray-100">
                                                 {nftInfo.description}
                                             </p>
-                                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-100">
-                                                You have {nftBalance} Carbon Credit NFTs claimed!!
-                                            </p>
+                                            
                                         </div>
                                     </div>
                                 );

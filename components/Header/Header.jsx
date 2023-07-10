@@ -22,11 +22,11 @@ const Header = () => {
                     </h1>
                     <div className="flex my-12 items-center font-poppins normal-case hidden md:flex">
                         <Link
-                                href="/nfts"
+                                href="/apply"
                                 className="text-white  bg-[#04A6E7] rounded-[1.5rem] px-4 py-2 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 font-poppins"
                                 style={{ fontSize: "1.25rem" }}
                             >
-                                Claim 1  REC NFT
+                                Place Order
                             </Link>
                         <Link
                             href="/watch-video"
@@ -58,11 +58,11 @@ const Header = () => {
 
                 <div className="flex items-center font-poppins normal-case mb-4 md:hidden">
                     <Link
-                        href="/signin"
+                        href="/apply"
                         className="text-white  bg-[#04A6E7] rounded-[1.5rem] px-4 py-2 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 font-poppins"
                         style={{ fontSize: "1.25rem" }}
                     >
-                        Sign In
+                        Place Order
                     </Link>
                     <Link
                         href="/watch-video"

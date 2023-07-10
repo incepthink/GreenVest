@@ -28,14 +28,14 @@ const Footer = () => {
                     
                     <div className='flex font-semibold flex-col mx-2'>
                         <p>Email</p>
-                        <p>prafulla.agarwal@tokere.com</p>
+                        <p>contact@tokere.com</p>
                     </div>
                 </div>
                 <div className='flex flex-row my-2 font-semibold'>
                 <div className='rounded-full p-3 bg-[#111C55] items-center'><LocalPhoneOutlined className='text-green-500' /></div>
                     <div className='flex flex-col mx-2'>
                         <p>Call Us</p>
-                        <p>(+91) 9986034385</p>
+                        <p>+919986034385</p>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ const Footer = () => {
             <div className='flex flex-col px-8 text-white'>
                 <input  className='outline-none text-white border-white rounded-md border-2 w-[80%] mx-auto bg-transparent text-white placeholder-white px-6 py-4' placeholder='Email here' />
                 <div className='w-[80%] flex flex-row mx-auto mt-4 items-center justify-between'>
-                    <button  className='text-white bg-green-500 px-4 py-2 rounded-md'> Send Now</button>
+                    <button  className='text-white bg-green-500 px-4 py-2 rounded-md'>Send Now</button>
                     <LinkedIn className='text-white' />
                     <FacebookOutlined className='text-white' />
                     <Twitter className='text-white' />

@@ -240,13 +240,7 @@ const Marketplace = () => {
                                 <img src='/images/sample_nft.png' alt="sample nft" className="md:w-[50%] w-[85%]" style={{'margin':'0 auto', borderRadius:'0.75rem'}} />
                             </div>
 
-                            <div className='w-full flex  p-1 mx-auto text-center justify-center'>
-                                {
-                                    
-                                    nftBalance > 0 && <span className=" text-white text-center font-bold">You have {nftBalance} Carbon Credit NFTs claimed in your <Link href='/myWallet' className="underline">Wallet</Link></span> 
-                                }
-
-                            </div>
+                            
                             
 
                                 <div className="w-full flex justify-center items-center">

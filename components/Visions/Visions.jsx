@@ -10,7 +10,7 @@ const Visions = () => {
                 <h2 className="text-4xl font-bold my-2">Vision & Mission</h2>
             </div>
             <h2 className="text-4xl font-bold my-2 hidden md:block">Vision & Mission</h2>
-            <p className="mb-4 text-gray-500 text-lg">Our platform provides verified, transparent and immutable RECs for a clear trail and transfer of ownership. Enterprises and Brokers will find tok-e-re a highly efficient platform to manage their REC transactions easier, faster and sustainable.</p>
+            <p className="mb-4 text-gray-500 text-lg">Accelerate Green Footprints.</p>
         </div>
         <div className="bg-white py-12 md:w-[21%] my-2 mx-auto rounded-xl w-[90%] cursor-pointer shadow-sm shadow-[#04A6E7] flex justify-center items-center font-poppins cursor-pointer hover:scale-105 hover:duration-500 hover:bg-[#b0e9f2]">
             <p className="text-black flex px-2 font-bold justify-center items-center text-center text-2xl">Tailor made to fit everyone&apos;s requirement.</p>
