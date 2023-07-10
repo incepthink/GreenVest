@@ -33,7 +33,7 @@ function MobileNav({open, setOpen ,user, anchorEl, openDropdown, handleClose, ha
                     href="/nfts" 
                     onClick={() => setTimeout(() => {setOpen(!open)}, 100)}
                 >
-                    NFTs
+                    REC NFTs
                 </Link>
                 <Link 
                     className={`my-4 ${router.pathname=='/' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2 '} `} 
@@ -149,7 +149,7 @@ const Navbar = () => {
                         href="/nfts" 
                         className={`mx-4 hover:scale-105 duration-150 items-center justify-center ease-in delay-150 ${router.pathname=='/nfts' && 'underline underline-offset-[6px] decoration-[#00337C] decoration-2'} `}
                     >
-                        NFTs
+                        REC NFTs
                     </Link>
                     <Link 
                         href="/" 

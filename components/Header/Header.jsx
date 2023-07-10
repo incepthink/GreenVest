@@ -15,10 +15,10 @@ const Header = () => {
                         tok-e-re
                     </h1>
                     <h1 className="md:text-4xl text-2xl  items-center">
-                        Switch to <span className="text-green-500">green energy</span> - made Affordable, Simple & Quick 
+                        Switch to <span className="text-green-500">green energy</span> made Affordable, Simple & Quick 
                     </h1>
                     <h1 className="text-base md:text-xl md:my-4 items-center normal-case text-gray-500 font-poppins">
-                    Fractional & Tokenised Renewable Energy Certificates (RECs) Transactions Platform
+                    Fractionalized & Tokenised Renewable Energy Certificates
                     </h1>
                     <div className="flex my-12 items-center font-poppins normal-case hidden md:flex">
                         <Link

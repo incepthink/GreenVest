@@ -29,21 +29,21 @@ const customStyles = {
 
 const Apply = () => {
     const router = useRouter();
-    const [name, setName] = useState('');
+    const [companyName, setCompanyName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNo, setPhoneNo] = useState('');
     const [address, setAddress] = useState('');
-    const [companyName, setCompanyName ] = useState('');
     const [gstNo, setGstNo] = useState('');
     const [quantity,setQuantity] = useState('');
     const [walletAddress,setWalletAddress] = useState('');
     const [isLoadingModalOpen, setIsLoadingModalOpen] = useState(false);
-
+    const [isGSTCheck, setIsGSTCheck] = useState(true)
+    const [requirment, setRequirement] = useState(true)
+    const [option,setOption] = useState("")
     const {state,dispatch} = useContext(StoreContext);
 
     useEffect(()=>{
         if(state.user) {
-            setEmail(state?.user?.email)
             setWalletAddress(state?.user?.magic_wallet)
         }    
         else {
@@ -53,8 +53,8 @@ const Apply = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        if(name === '' || email === '' || walletAddress === ""  || phoneNo === '' || address === '' 
-        || companyName === '' || quantity === '') {
+        if(email === '' || walletAddress === ""  || phoneNo === '' || address === '' 
+        || companyName === '' || quantity === '' || option === '') {
             toast.error("Please fill all the details")
             return;
         }
@@ -72,14 +72,15 @@ const Apply = () => {
             return;
         }
         let form = {
-            name,
+            companyName,
+            address,
             email,
             phoneNo,
-            address,
-            walletAddress,
-            companyName,
             gstNo,
-            quantity
+            quantity,
+            requirment: requirment ? "Recurring" : "1 time purchase",
+            option,
+            walletAddress
         }
         setIsLoadingModalOpen(true);
         const rawResponse = await fetch('/api/submit', {
@@ -92,8 +93,12 @@ const Apply = () => {
         });
         console.log(await rawResponse.json());
         setIsLoadingModalOpen(false);
-        toast.success("Submitted Successfully!!");
+        toast.success("We have received your order, We will contact you within 24 hours. Thank You!");
 
+    }
+
+    const handleOptionChange = (e) => {
+        setOption(e.target.value)
     }
 
     return (
@@ -130,39 +135,22 @@ const Apply = () => {
                                 
                                 {/* information content */}
                                 <form onSubmit={handleSubmit} >
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Username *</span>
+                                    
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-2'>
+                                        <span className='text-md text-white font-semibold my-2'>Company / Individual Name *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 placeholder:text-white text-md text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="text"
-                                            value={name}
+                                            value={companyName}
                                             onChange={(e) => {
-                                                setName(e.target.value);
+                                                setCompanyName(e.target.value);
                                             }} 
-                                            placeholder='Enter your username' 
                                             required
                                         />
                                     </div>
 
-
-                                    
-
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Phone Number *</span>
-                                        <input
-                                            className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
-                                            type="text"
-                                            value={phoneNo}
-                                            onChange={(e) => {
-                                                setPhoneNo(e.target.value);
-                                            }} 
-                                            placeholder='Enter your phone no here'
-                                            required 
-                                        />
-                                    </div>
-                                    
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Address *</span>
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-2'>
+                                        <span className='text-md text-white font-semibold my-2'>Company / Individual Address *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="text"
@@ -170,42 +158,87 @@ const Apply = () => {
                                             onChange={(e) => {
                                                 setAddress(e.target.value);
                                             }} 
-                                            placeholder='Enter your address here'
                                             required 
                                         />
                                     </div>
+                                    
+
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-2'>
+                                        <span className='text-md text-white font-semibold my-2'>Email Id *</span>
+                                        <input
+                                            className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                            type="text"
+                                            value={email}
+                                            onChange={(e) => {
+                                                setEmail(e.target.value);
+                                            }} 
+                                            required 
+                                        />
+                                    </div>
+                                    
+                                    
 
                                         
                                     
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your Company Name *</span>
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-2'>
+                                        <span className='text-md text-white font-semibold my-2'>Contact Number *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 placeholder:text-white text-md text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="text"
-                                            value={companyName}
+                                            value={phoneNo}
                                             onChange={(e) => {
-                                                setCompanyName(e.target.value);
+                                                setPhoneNo(e.target.value);
                                             }}  
-                                            placeholder='Enter your company name here'
                                             required
                                         />
                                     </div>
-
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Your GST Number </span>
+                                    <div className='w-[90%] mx-auto flex items-center font-poppins my-2'>
+                                        <span className='text-md text-white font-semibold my-2'>Do You have Gst Number? </span>
                                         <input
-                                            className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
-                                            type="number"
-                                            value={gstNo}
+                                            className='bg-[#68CAF1] h-4 w-4 m-2 rounded-full text-md placeholder:text-white text-white font-regular border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                            type="checkbox"
+                                            checked={isGSTCheck}
                                             onChange={(e) => {
-                                                setGstNo(e.target.value);
+                                                if(isGSTCheck) {
+                                                    setIsGSTCheck(false)
+                                                }
+                                                else setIsGSTCheck(true)
                                             }}  
-                                            placeholder='write your company&apos;s GST number'
                                         />
-                                    </div>
+                                        <span className='text-md text-white font-regular my-2'>Yes</span>
 
-                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
-                                        <span className='text-md text-white font-regular my-2'>Enter Quantity *</span>
+                                        <input
+                                            className='bg-[#68CAF1] h-4 w-4 m-2 rounded-full text-md placeholder:text-white text-white font-regular border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                            type="checkbox"
+                                            checked={!isGSTCheck}
+                                            onChange={(e)=>{
+                                                if(!isGSTCheck) {
+                                                    setIsGSTCheck(true)
+                                                }
+                                                else setIsGSTCheck(false)
+                                            }}  
+                                        />
+                                        <span className='text-md text-white font-regular my-2'>No</span>
+                                    </div>
+                                    {
+                                        isGSTCheck && (
+                                            <div className='w-[90%] mx-auto flex flex-col font-poppins my-2'>
+                                                <span className='text-md text-white font-semibold my-2'>GST Number </span>
+                                                <input
+                                                    className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                                    type="number"
+                                                    value={gstNo}
+                                                    onChange={(e) => {
+                                                        setGstNo(e.target.value);
+                                                    }}  
+                                                    required = {isGSTCheck}
+                                                />
+                                            </div>
+                                        )
+                                    }
+
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-2'>
+                                        <span className='text-md text-white font-semibold my-2'>Quantity (1 REC NFT = 1kWh Unit on your electricity bill) *</span>
                                         <input
                                             className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
                                             type="number"
@@ -213,13 +246,62 @@ const Apply = () => {
                                             onChange={(e) => {
                                                 setQuantity(e.target.value);
                                             }}  
-                                            placeholder='Enter Quantity of NFT&apos;s you wish to claim'
                                             required
                                         />
                                     </div>
 
-                                    <div className="w-[90%] mx-auto flex justify-center items-center">
-                                        <button type='submit' className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
+                                    <div className='w-[90%] mx-auto flex flex-col items-start font-poppins my-2'>
+                                        <span className='text-md text-white font-semibold '>Requirement </span>
+                                        <div className='w-full flex flex-col md:flex-row items-center justify-between'>
+                                            
+                                            <div className='w-full flex items-center my-1'>
+                                                <input
+                                                    className='bg-[#68CAF1] h-4 w-4 rounded-full text-md placeholder:text-white text-white font-regular border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                                    type="checkbox"
+                                                    checked={requirment}
+                                                    onChange={(e) => {
+                                                        if(requirment) {
+                                                            setRequirement(false)
+                                                        }
+                                                        else setRequirement(true)
+                                                    }}  
+                                                />
+                                                <span className='text-md text-white font-regular md:ml-2'>Recurring Purchase</span>
+                                            </div>
+                                            <div className='w-full flex items-center my-1'>
+                                                <input
+                                                    className='bg-[#68CAF1] h-4 w-4 rounded-full text-md placeholder:text-white text-white font-regular border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none'
+                                                    type="checkbox"
+                                                    checked={!requirment}
+                                                    onChange={(e)=>{
+                                                        if(!requirment) {
+                                                            setRequirement(true)
+                                                        }
+                                                        else setRequirement(false)
+                                                    }}  
+                                                />
+                                                <span className='text-md text-white font-regular md:ml-2'>1 time purchase</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className='w-[90%] mx-auto flex flex-col font-poppins my-4'>
+                                        <select
+                                            value={option}
+                                            onChange={handleOptionChange}
+                                            className='bg-[#68CAF1] p-2 text-md placeholder:text-white text-white font-regular rounded-md border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start outline-none' 
+                                        >
+                                            <option value="">--Select--</option>
+                                            <option value="Campus">Are you a campus</option>
+                                            <option value="Stand Alone Building">Stand Alone Building</option>
+                                            <option value="Multitenanted">Multitenanted</option>
+                                            <option value="Villa">Villa</option>
+                                            <option value="Flat">Flat</option>
+                                        </select>
+                                    </div>
+
+                                    <div className="w-[90%] mx-auto flex justify-center items-center text-xl font-poppins">
+                                        <button type='submit' className='w-full self-center bg-[#0e7490] px-2 py-2 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3.5 mb-5 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
                                             Submit
                                         </button>
                                     </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
 import { env } from "@/next.config";
 import { StoreContext } from "@/utils/Store";
@@ -220,9 +221,9 @@ const Marketplace = () => {
                                 {/* NFT NAME */}
                                 <span className='text-xl text-white font-semibold '>Name of NFT</span>
                                 <span
-                                    className='bg-[#68CAF1] p-3 text-2xl text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
+                                    className='bg-[#68CAF1] p-3 text-xl text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex  items-center'
                                 >
-                                    Tokere Tree
+                                    tok-e-re TREE&nbsp;&nbsp;<Image src='/images/sample_nft.png' alt="sample nft" width={40} height={40} style={{objectFit:'contain'}}/>
                                 </span>
                             </div>
 
@@ -231,9 +232,9 @@ const Marketplace = () => {
                                 {/* NFT NAME */}
                                 <span className='text-xl text-white font-semibold my-2'>Description</span>
                                 <span
-                                    className='bg-[#68CAF1] p-4 text-lg text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
+                                    className='bg-[#68CAF1] p-4 text-xl text-white font-bold rounded-xl border-[#E3E3E3] border-solid border-[2px] flex flex-col items-start'
                                 > 
-                                    1 Tree NFT = 1kWh
+                                    1 REC NFT  = 1kWh (Unit of power)
                                 </span>
                             </div>    
                             <div className="w-full flex flex-col my-4 ">
@@ -244,7 +245,7 @@ const Marketplace = () => {
                             
 
                                 <div className="w-full flex justify-center items-center">
-                                    <button onClick={() => router.push('/apply')} className='w-full self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3 mb-3 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
+                                    <button onClick={() => router.push('/apply')} className='w-full text-xl self-center bg-[#0e7490] px-2 py-4 rounded-md text-centers border-none outline-none cursor-pointer bg-white text-[#04A6E7] font-semibold mt-3 mb-3 transition delay-500 ease hover:-translate-y-2 active:translate-y-4'>
                                         Place Order 
                                     </button>
                                 </div>

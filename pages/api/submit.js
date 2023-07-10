@@ -30,7 +30,17 @@ export default async function handler(req, res) {
             valueInputOption: 'USER_ENTERED',
             requestBody: {
                 values: [
-                    [body.name, body.email, body.phoneNo, body.address, body.walletAddress, body.companyName, body.gstNo, body.quantity]
+                    [   body.companyName,
+                        body.address,
+                        body.email,
+                        body.phoneNo,
+                        body.gstNo,
+                        body.quantity,
+                        body.requirment,
+                        body.option,
+                        body.walletAddress
+                    ]
+                    // [body.name, body.email, body.phoneNo, body.address, body.walletAddress, body.companyName, body.gstNo, body.quantity]
                 ]
             }
         });

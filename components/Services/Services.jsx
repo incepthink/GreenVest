@@ -13,7 +13,8 @@ const Services = () => {
                 <h2 className="text-4xl font-bold uppercase tracking-wide">services</h2>
             </div>
             <p className='text-lg mt-4 text-gray-500 leading-8 pb-4'>
-            Relevant across the spectrum whether you are an enterprise, industry or a household, we have fit-to-purpose solutions for every need.
+            Enterprises, Real Estate Developers and Individuals will find tok-e-re a highly efficient platform to manage their customised fractional REC transactions easier and faster.
+Our platform provides verified, transparent and immutable REC NFTs for a clear trail and transfer of ownership.
             </p>
         </div>
         <div className='flex flex-col md:flex-row md:max-w-[90%] w-100 mx-auto justify-evenly items-center my-12 font-poppins'>
@@ -40,7 +41,7 @@ const Services = () => {
                 </div>
                 <div className='text-center items-center justify-center flex-col my-4'>
                     <h2 className='text-xl font-semibold'>
-                        Developers 
+                       Real Estate Developers
                     </h2>
                     <p className='font-light text-md my-2 px-2'>
                     Irrespective of the scale of the asset, every building has an immense opportunity to upgrade its value for higher returns. You can start by offsetting your power consumption with our curated and tokenised RECs. 
