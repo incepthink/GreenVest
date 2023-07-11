@@ -28,7 +28,7 @@ const Header = () => {
                             >
                                 Place Order
                             </Link>
-                        <Link
+                        {/* <Link
                             href="/watch-video"
                             className="flex ml-12 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 font-poppins"
                             style={{ fontSize: "1.25rem" }}
@@ -40,7 +40,7 @@ const Header = () => {
                             <button className="text-[#04A6E7] flex ml-1 items-center">
                                 Watch Video
                             </button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@ const Header = () => {
                     >
                         Place Order
                     </Link>
-                    <Link
+                    {/* <Link
                         href="/watch-video"
                         className="flex ml-12 hover:scale-105 hover:duration-150 hover:ease-in hover:delay-150 font-poppins"
                         style={{ fontSize: "1.25rem" }}
@@ -76,7 +76,7 @@ const Header = () => {
                         <button className="text-[#04A6E7] flex ml-1 items-center">
                             Watch Video
                         </button>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </div>
