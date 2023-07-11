@@ -8,7 +8,7 @@ const Header = () => {
     const { state, dispatch } = useContext(StoreContext);
 
     return (
-        <div className="max-w-screen md:h-[50%] h-[100%] bg-[#04a6e71a] md:rounded-bl-[163px] rounded-bl-[80px]">
+        <div className="max-w-screen md:h-[80%] h-[100%] bg-[#04a6e71a] md:rounded-bl-[163px] rounded-bl-[80px]">
             <div className="flex flex-col md:flex-row justify-around items-center">
                 <div className="md:w-[60%] w-[100%] my-4 md:px-24 px-8 font-bold md:py-16 flex-col font-poppins ">
                     <h1 className="md:text-7xl text-5xl flex text-[#04A6E7] items-center">
