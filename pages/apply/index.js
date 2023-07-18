@@ -46,14 +46,12 @@ const Apply = () => {
         if(state.user) {
             setWalletAddress(state?.user?.magic_wallet)
         }    
-        else {
-            router.push('/signin');
-        }
-    },[state.user,router])
+        
+    },[state.user])
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        if(email === '' || walletAddress === ""  || phoneNo === '' || address === '' 
+        if(email === '' || phoneNo === '' || address === '' 
         || companyName === '' || quantity === '' || option === '') {
             toast.error("Please fill all the details")
             return;
