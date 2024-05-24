@@ -9,4 +9,15 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+// module.exports = nextConfig
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: 'https://tokere.com',
+        permanent: true,
+      },
+    ]
+  },
+}
