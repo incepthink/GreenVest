@@ -24,9 +24,9 @@ export default function Home() {
             <Image src="/images/workflow1.png" alt="vision 1" className="shadow-md my-4 mx-auto shadow-[#04A6E7] cursor-pointer hover:scale-105 hover:duration-500" width={700} height={700}  />
           </div>
           <div className="my-4 hidden md:flex max-w-screen  h-[52vh] bg-home-background-1 bg-cover bg-center" />
-          <MeetOurTeam />
-          <OurPartners />
           <Footer />
       </div>
     )
 }
+          // <MeetOurTeam />
+          // <OurPartners />
