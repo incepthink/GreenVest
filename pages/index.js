@@ -12,7 +12,7 @@ export default function Home() {
     return (
       <div>
           <Head>
-            <title>About Us</title>
+            <title>Tokere</title>
           </Head>
           <Navbar />
           <Header />
