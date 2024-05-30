@@ -12,7 +12,7 @@ export default function Home() {
     return (
       <div>
           <Head>
-            <title>Tokere</title>
+            <title>Tokere Temp</title>
           </Head>
           <Navbar />
           <Header />
